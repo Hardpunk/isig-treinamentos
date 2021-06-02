@@ -1,0 +1,893 @@
+@media (max-width: 400px) {
+    .plans-class .list-plans img.plan-discount {
+        top: -15px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 599px) {
+    body {
+        font-size: 10px;
+    }
+
+    .header-class.mobile {
+        width: 100%;
+        background-size: cover;
+    }
+
+    .header-class h1.title.title-header {
+        font-size: 2.5em !important;
+        font-weight: 700 !important;
+        margin-top: 20px;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .header-class h2.subtitle {
+        font-size: 1.5em;
+        font-weight: 500;
+        width: 60%;
+    }
+
+    .header-class.mobile .badge-2 {
+        width: 45%;
+        margin-top: 50px;
+    }
+
+    .menu.mobile {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .choose-category h1.title {
+        font-size: 2.8em;
+    }
+    .choose-category p.description {
+        font-size: 1.3em;
+    }
+
+    .how-works-class .container .row {
+        margin-top: 0;
+    }
+
+    .how-works-class h1.title {
+        font-size: 2.8em;
+    }
+
+    .how-works-class p.description {
+        font-size: 1.3em;
+    }
+
+    .plans-class {
+        background-color: transparent;
+        margin-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .plans-class .title {
+        font-size: 2.8em;
+        margin-bottom: 20px;
+    }
+
+    .plans-class .btn {
+        font-size: 1.8em;
+    }
+
+    .plan-price, .price-featured {
+        font-size: 0.9em !important;
+    }
+
+    .courses-class .container {
+        background: 0;
+        background-color: #97329E;
+    }
+
+    .courses-class .cta .btn {
+        font-size: 0.7em;
+    }
+
+    .best-mentoring .bg-mentoring {
+        border-radius: 0;
+        background: 0;
+        background: #00da00;
+        padding-bottom: 20px;
+    }
+
+    .courses-class .best-mentoring h1.title {
+        font-size: 2.5em;
+    }
+
+    .courses-class .best-mentoring p.description {
+        font-size: 1.5em;
+        width: 100% !important;
+    }
+
+    .courses-class .model {
+        margin: 0 auto;
+    }
+
+    .app-class .title {
+        font-size: 2em;
+        width: 100% !important;
+    }
+
+    .app-class .subtitle {
+        font-size: 1.4em;
+        font-weight: 700;
+    }
+
+    .app-class .description {
+        font-size: 1.4em;
+        font-weight: 700;
+    }
+
+    .app-class ul li {
+        font-size: 1.2em;
+    }
+
+    .app-class .mortarboard {
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .menu.mobile>.d-flex {
+        height: 70px;
+    }
+
+    .menu.mobile>.d-flex .logo {}
+
+    .menu.mobile .navbar-nav {
+        padding: 0 20px 0 0;
+    }
+
+    .menu.mobile .navbar-nav li:not(:last-child) {
+        border-bottom: 1px solid #777;
+    }
+
+    .menu.mobile .navbar-nav li:last-child {
+        margin-top: 10px;
+    }
+
+    .menu.mobile .nav-item .nav-link.btn {
+        margin-left: 0;
+    }
+
+    .navbar-class.mobile {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .hero-class .title {
+        font-size: 1.714em;
+        font-weight: 500;
+    }
+
+    .hero-class .subtitle {
+        font-size: 1.257em;
+        font-weight: 500;
+    }
+
+    .items-plans ul li {
+        margin-bottom: 8px;
+    }
+
+    .video-banner {
+        height: 190px;
+        padding-top: 10px;
+    }
+
+    .consulting-class .items {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        counter-reset: my-awesome-counter;
+        align-content: stretch;
+        flex-direction: column;
+        margin: 0 0 20px 0;
+        padding: 0;
+    }
+
+    .consulting-class .items>.item {
+        font-size: 1.142em;
+        counter-increment: my-awesome-counter;
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    .consulting-class .items>.item:not(:first-child) {
+        margin-left: 0;
+    }
+
+    .teachers-skills {
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    .teachers-skills .item {
+        margin-bottom: 20px
+    }
+
+    .courses-class {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .courses-class .title {
+        font-size: 2.3em;
+        font-weight: 900;
+        margin-bottom: 30px;
+    }
+
+    .incredible-class {
+        text-align: center;
+        min-height: auto !important;
+        padding-top: 25px;
+    }
+
+    .dream-class .video-bg {
+        width: 100%;
+        height: 100%;
+        margin-top: -10px;
+        background-size: contain;
+        padding-right: 15px;
+        padding-bottom: 35px;
+    }
+
+    .dream-class h1.title {
+        font-size: 3.333em;
+    }
+
+    .userarea-class p.description, .dream-class p.description {
+        font-size: 1.5em;
+        color: #373838;
+    }
+
+    .account-form {
+        background: transparent !important;
+        padding: 0;
+    }
+
+    .internal .essays-class .title {
+        font-size: 2em !important;
+    }
+
+    .internal .essays-class .title-essay {
+        font-size: 1.4em !important;
+    }
+
+    .form-credit-card, .form-boleto {
+        background: transparent !important;
+    }
+
+    .internal .essays-class .title-genre {
+        font-size: 1.3em !important;
+    }
+
+    .internal .essays-class.theme .status-essay {
+        text-align: left;
+    }
+
+    .internal .essays-class.theme .status-essay p {
+        text-align: left;
+    }
+
+    .internal .essays-class.theme .status-essay p strong {
+        text-align: left;
+    }
+
+    .internal .essays-class.theme .status-essay .created-at {
+        text-align: left;
+    }
+
+    .userarea-class p.description a {
+        font-size: 1em;
+        color: #373838;
+        text-decoration: underline;
+    }
+
+    .teachers-class {
+        padding-top: 20px;
+    }
+
+    .teachers-class .title {
+        font-weight: 800;
+        font-size: 2.3em;
+        margin-bottom: 15px;
+    }
+
+    .media-class {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .media-class .title {
+        font-size: 3.333em;
+        font-weight: 900;
+        margin-bottom: 15px;
+        padding: 0;
+    }
+
+    .media-class .description {
+        font-size: 1.5em;
+        font-weight: 500;
+        padding: 0;
+    }
+
+    .media-clipping {
+        text-align: center;
+    }
+
+    .media-clipping img {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .media-clipping:not(:last-child) {
+        margin: 0 auto 20px;
+    }
+
+    .media-clipping:last-child {
+        margin: 0 auto 20px;
+    }
+
+    .testimonials-class .title {
+        font-size: 2.3em !important;
+    }
+
+    footer img.img-fluid {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .plan-card>.items>.item.-active {
+        font-size: 1.3em;
+        font-weight: 800;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 3px 0;
+        position: relative;
+    }
+
+    .plan-card>.items>.item.-active:before {
+        content: "";
+        width: .2em;
+        bottom: -.45em;
+        position: absolute;
+        display: block;
+        border: 0;
+        box-shadow: 0;
+        z-index: -1 !important;
+    }
+
+    .plan-card>.items>.item.-active:before {
+        left: 0;
+        border: 0;
+        box-shadow: 0;
+    }
+
+    .plan-card>.items>.item.-active:after {
+        content: "";
+        width: .2em;
+        bottom: -.45em;
+        position: absolute;
+        display: block;
+        border: 0;
+        box-shadow: 0;
+        z-index: -2;
+    }
+
+    .plan-card>.items>.item.-active:after {
+        right: -1.15em;
+        border: 0;
+        box-shadow: 0;
+    }
+
+    .teacher-class .list-teachers {
+        background-color: #eee;
+        min-height: auto;
+        border-radius: 10px;
+        padding-top: 10px;
+    }
+
+    .teacher-class h4 {
+        font-size: 1.416em;
+        width: 100% !important;
+        color: #30a453 !important;
+        display: block !important;
+    }
+
+    .internal header:not(.header-courses-class) {
+        min-height: 307px !important;
+        background: url("../images/internal/bg-header-internal-mobile.png?123456") no-repeat center bottom !important;
+        background-size: cover !important;
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .guide>.title {
+        font-size: 3.333em !important;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+
+    .help-class .title {
+        font-size: 2.083em;
+    }
+
+    .card-header {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .btn.btn-link.collapsed {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .internal .tarja {
+        font-size: 1em;
+        font-weight: 700;
+    }
+
+    .internal .header-class.lesson-class {
+        height: 120px;
+        min-height: 120px;
+    }
+
+    .internal .header-class.lesson-class .title {
+        font-size: 2em;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .internal .header-class.lesson-class .navbar-brand {
+        width: 45%;
+    }
+
+    /* .popup {
+		width: 85%;
+		height: 40%;
+	} */
+    .incredible-class .title {
+        color: #30a453;
+    }
+
+    .pages-class p {
+        font-size: 1.5em !important;
+    }
+
+    .pages-class .video-bar {
+        min-height: auto;
+        background: url('../images/internal/bg-video-quem-somos.png?1') no-repeat 0 0;
+        background-size: cover;
+        padding-bottom: 15px;
+        display: block;
+    }
+
+    .pages-class .video-bg {
+        width: 100% !important;
+        height: auto;
+        background: url('../images/internal/bg-video-about-mobile.png?13') no-repeat 0 10px;
+        background-size: contain;
+        margin-top: -20px;
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 15px;
+        padding-bottom: 0;
+        display: block;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .menu.mobile a {
+        color: #666;
+    }
+
+    .navbar-toggler span {
+        font-size: 1.7em;
+        background: #fff !important;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .top-bar {
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .plans-class .list-plans img.plan-discount {
+        top: -15px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+    .header-class.mobile {
+        min-height: auto;
+        background: 0;
+    }
+
+    .menu.mobile {
+        width: 100%;
+        /*background-color: #fff;*/
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu.mobile>.d-flex {
+        height: 70px;
+    }
+
+    /*.menu.mobile>.d-flex .logo {
+        width: 70%;
+    }*/
+
+    .menu.mobile .navbar-nav {
+        margin: 20px;
+        padding: 0 20px 0 0;
+    }
+
+    .menu.mobile .navbar-nav li:not(:last-child) {
+        border-bottom: 1px solid #777;
+    }
+
+    .menu.mobile .navbar-nav li:last-child {
+        margin-top: 10px;
+    }
+
+    .menu.mobile .nav-item .nav-link.btn {
+        margin-left: 0;
+    }
+
+    .navbar-class.mobile {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .hero-class .title {
+        font-size: 1.714em;
+        font-weight: 500;
+    }
+
+    .hero-class .subtitle {
+        font-size: 1.257em;
+        font-weight: 500;
+    }
+
+    .video-banner {
+        height: 350px;
+        padding-top: 10px;
+    }
+
+    .video-banner iframe {
+        width: 100%;
+        padding: 0px 18px;
+    }
+
+    .teachers-skills {
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    .teachers-skills .item {
+        margin-bottom: 20px
+    }
+
+    .courses-class {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .courses-class .title {
+        font-size: 2.3em;
+        font-weight: 900;
+        margin-bottom: 30px;
+    }
+
+    .incredible-class {
+        text-align: center;
+        min-height: auto !important;
+        padding-top: 25px;
+    }
+
+    .teachers-class {
+        padding-top: 20px;
+    }
+
+    .teachers-class .title {
+        font-weight: 800;
+        font-size: 2.3em;
+        margin-bottom: 15px;
+    }
+
+    .media-class {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .media-class .title {
+        font-size: 1.5em;
+        font-weight: 700;
+        margin-bottom: 15px;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    .media-clipping .list-inline-item {
+        text-align: center;
+    }
+
+    .media-clipping .list-inline-item img {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .media-clipping .list-inline-item:not(:last-child) {
+        margin: 0 auto 20px;
+    }
+
+    .media-clipping .list-inline-item:last-child {
+        margin: 0 auto 20px;
+    }
+
+    .testimonials-class .media {
+        height: 180px;
+    }
+
+    footer img.img-fluid {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .plan-card>.items>.item.-active {
+        font-size: 1.3em;
+        font-weight: 800;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 3px 0;
+        position: relative;
+    }
+
+    .plan-card>.items>.item.-active:before {
+        content: "";
+        width: .2em;
+        bottom: -.45em;
+        position: absolute;
+        display: block;
+        border: 0;
+        box-shadow: 0;
+        z-index: -1 !important;
+    }
+
+    .plan-card>.items>.item.-active:before {
+        left: 0;
+        border: 0;
+        box-shadow: 0;
+    }
+
+    .plan-card>.items>.item.-active:after {
+        content: "";
+        width: .2em;
+        bottom: -.45em;
+        position: absolute;
+        display: block;
+        border: 0;
+        box-shadow: 0;
+        z-index: -2;
+    }
+
+    .plan-card>.items>.item.-active:after {
+        right: -1.15em;
+        border: 0;
+        box-shadow: 0;
+    }
+
+    .internal .header-class {
+        min-height: 100px;
+        background: url("../images/internal/bg-guide.png") no-repeat center center;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .guide>.title {
+        font-size: 2em;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+
+    .internal .header-class.lesson-class {
+        height: 120px;
+        min-height: 120px;
+        background: #1F063B url("../images/internal/bg-lesson.png") no-repeat center center;
+        background-size: cover;
+    }
+
+    .internal .header-class.lesson-class .title {
+        font-size: 2em;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .internal .header-class.lesson-class .navbar-brand {
+        width: 22%;
+    }
+
+    .best-mentoring .bg-mentoring {
+        border-radius: 0;
+        background: 0;
+        background: #00da00;
+        padding-bottom: 20px;
+    }
+
+    .courses-class .best-mentoring h1.title {
+        font-size: 2.5em;
+    }
+
+    .courses-class .best-mentoring p.description {
+        font-size: 1.5em;
+        width: 100% !important;
+    }
+
+    .courses-class .model {
+        margin: 0 auto;
+    }
+
+    .app-class .title {
+        font-size: 2em;
+        width: 100% !important;
+    }
+
+    .app-class .subtitle {
+        font-size: 1.4em;
+        font-weight: 700;
+    }
+
+    .app-class .description {
+        font-size: 1.4em;
+        font-weight: 700;
+    }
+
+    .app-class ul li {
+        font-size: 1.2em;
+    }
+
+    .app-class .mortarboard {
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .courses-class .container {
+        background: 0;
+        background-color: #97329E;
+    }
+
+    .plans-class .plan-table p {
+        font-size: 1.1em;
+    }
+
+    .plans-class .title {
+        font-size: 2.7em !important;
+        font-weight: 600 !important;
+    }
+
+    .items-plans .btn {
+        font-size: 1.2em;
+    }
+
+    .list-plans h3 {
+        font-size: 2em;
+        font-weight: 700;
+    }
+
+    .list-plans .old-price {
+        font-size: 1.3em;
+        font-weight: 600;
+    }
+
+    .list-plans .new-price {
+        font-size: 2em;
+    }
+
+    /* .popup {
+		width: 55%;
+		height: 65%;
+	} */
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    /* .popup {
+		width: 65%;
+		height: 50%;
+	} */
+    .choose-category h1.title {
+        font-size: 2.8em;
+    }
+
+    .choose-category .container-fluid {
+        padding-top: 20px;
+    }
+
+    .choose-category .container {
+        background: 0
+    }
+
+    .choose-category .container .row {
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .how-works-class .container-fluid {
+        background-color: #005D9D;
+        padding-top: 20px;
+    }
+
+    .how-works-class .container {
+        background: 0
+    }
+
+    .how-works-class .container .row {
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .how-works-class h1.title {
+        font-size: 2.8em;
+    }
+
+    .how-works-class p.description {
+        font-size: 1.3em;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {}
+
+@media (min-width: 900px) {
+    .tablet-landscape-up {
+        background: purple;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1799px) {
+    .desktop-only {
+        background: purple;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 12px !important;
+    }
+
+    .header-class h1.title.title-header {
+        font-size: 3.5em;
+        font-weight: 800;
+        margin-top: 20px;
+    }
+
+    .desktop-up {
+        background: purple;
+    }
+
+    /* .popup {
+		width: 25%;
+		height: 50%;
+	} */
+}
+
+@media (min-width: 1930px) {
+    .header-class {
+        min-height: 800px;
+        background-size: contain !important;
+    }
+}

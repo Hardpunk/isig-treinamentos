@@ -1,0 +1,38 @@
+section#funcionalidades__wrapper {
+    color: $acim-color-secondary !important;
+    background: #eaeaea;
+    h2.title {
+        font-size: 2.5em;
+        font-weight: 700;
+    }
+    .card {
+        border: none;
+        background: transparent !important;
+        .card-body {
+            .item--icon__wrapper {
+                i {
+                    font-size: 70px;
+                    color: #35364c;
+                }
+            }
+            .item--text__wrapper {
+                p.item--description {
+                    @include font-size(14px);
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    section#funcionalidades__wrapper {
+        .card {
+            .card-body {
+                .item--icon__wrapper {
+                    i {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

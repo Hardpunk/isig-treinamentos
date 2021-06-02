@@ -1,0 +1,132 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+}
+.logo {
+	width: 18%;
+	float: left;
+	display: block;
+}
+.div-right {
+	width: 80%;
+	float: right;
+	display: block;
+}
+.summary ul {
+	font-size: 0.6em;
+}
+ul {
+	font-size: 0.7em;
+	border: 1px solid #000;
+	list-style: none;
+	padding: 10px;
+}
+.clearfix {
+	width: 100%;
+	display: block;
+}
+.clearfix:before,
+.clearfix:after {
+	display: table;
+  	content: " ";
+}
+.clearfix:after {
+	clear: both;
+}
+.instructions {
+	font-size: 0.7em;
+	width: 60%;
+	float: left;
+}
+.instructions ul {
+	border: 0;
+}
+.essay-title {
+	font-size: 0.8em;
+	width: 40%;
+	text-transform: uppercase;
+	text-aligh: right !important;
+	float: right;
+}
+table {
+	font-size: 0.8em;
+	width: 100%;
+	border: 1px solid #000;
+	text-align: center;
+	border-spacing: 0;
+}
+table * {
+	margin: 0;
+	padding: 0;
+}
+table tr td {
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+.number-line {
+	width: 5%;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+.number-line.no-border-bottom {
+	border-bottom: 0 !important;
+}
+.space-cell {
+	width: 3%;
+}
+.line-cell {
+	width: 89%;
+	border-bottom: 1px solid #000;
+}
+footer {
+	margin-top: 10px;
+}
+footer .footer-left {
+	width: 55%;
+	border: 2px solid #000;
+	display: block;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	float: left;
+}
+footer .footer-right {
+	text-align: center;
+	width: 40%;
+	float: right;
+}
+footer .footer-right ul {
+	font-size: 0.9em;
+	width: 100%;
+	border: 0;
+	 padding:0px;
+    margin: 0 0 5px;
+}
+footer .footer-right ul::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 0;
+}	
+footer .footer-right ul li {
+	width: 18%;
+	text-align: center;
+	margin-left: 5px;
+	float: left;
+    display: block;
+}
+footer .footer-right li div {
+	width: 15% !important;
+	border: 1px solid #000 !important;
+	display: block;
+	margin-bottom: 5px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+address {
+	text-align: right
+}
+.address-normal {
+	font-size: 0.7em;
+}

@@ -1,0 +1,299 @@
+<?php
+
+if (!function_exists('format_cpf_cnpj')) {
+
+    /**
+     * Format CPF/CNPJ
+     *
+     * @param $value
+     * @return string|string[]|null
+     */
+    function format_cpf_cnpj($value)
+    {
+        $cnpj_cpf = preg_replace("/\D/", '', $value);
+
+        if (strlen($cnpj_cpf) === 11) {
+            return preg_replace("/(\d{3})(\d{3})(\d{3})(\d{2})/", "\$1.\$2.\$3-\$4", $cnpj_cpf);
+        }
+
+        return preg_replace("/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/", "\$1.\$2.\$3/\$4-\$5", $cnpj_cpf);
+    }
+}
+
+if (!function_exists('getFirstName')) {
+
+    /**
+     * Get First Name
+     *
+     * @param $name
+     * @return String
+     */
+    function getFirstName($name): String
+    {
+        preg_match('/\p{L}+/ui', $name, $matches);
+        return $matches[0];
+    }
+}
+
+if (!function_exists('getLastName')) {
+
+    /**
+     * Get First Name
+     *
+     * @param $name
+     * @return String
+     */
+    function getLastName($name): String
+    {
+        return substr(str_replace('.', '.', str_replace('\'', '', $name)), 0, 30);
+    }
+}
+
+if (!function_exists('remove_special_char')) {
+
+    /**
+     * Get First Name
+     *
+     * @param $value
+     * @return String
+     */
+    function remove_special_char($value)
+    {
+        $value = str_replace('-', ' ', $value);
+        $result = preg_replace('/[^a-zA-Z0-9 ]/s', '', $value);
+        return $result;
+    }
+}
+
+if (!function_exists('get_language_country_flag')) {
+
+    /**
+     * Get First Name
+     *
+     * @param $code
+     * @return String
+     */
+    function get_language_country_flag($code)
+    {
+        $language_codes = [
+            'ar' => [
+                'country' => 'Arábia Saudita',
+                'language' => 'Árabe',
+                'file' => 'saudi-arabia',
+            ],
+            'en' => [
+                'country' => 'Estados Unidos',
+                'language' => 'Inglês',
+                'file' => 'united-states-of-america',
+            ],
+            'es' => [
+                'country' => 'Espanha',
+                'language' => 'Espanhol',
+                'file' => 'spain',
+            ],
+            'de' => [
+                'country' => 'Alemanha',
+                'language' => 'Alemão',
+                'file' => 'germany',
+            ],
+            'fr' => [
+                'country' => 'França',
+                'language' => 'Francês',
+                'file' => 'france',
+            ],
+            'it' => [
+                'country' => 'Itália',
+                'language' => 'Italiano',
+                'file' => 'italy',
+            ],
+            'ja' => [
+                'country' => 'Japão',
+                'language' => 'Japonês',
+                'file' => 'japan',
+            ],
+            'nl' => [
+                'country' => 'Holanda',
+                'language' => 'Holandês',
+                'file' => 'netherlands',
+            ],
+            'pl' => [
+                'country' => 'Polônia',
+                'language' => 'Polonês',
+                'file' => 'republic-of-poland',
+            ],
+            'pt' => [
+                'country' => 'Brasil',
+                'language' => 'Português',
+                'file' => 'brazil',
+            ],
+            'ru' => [
+                'country' => 'Rússia',
+                'language' => 'Russo',
+                'file' => 'russia',
+            ],
+            'zh' => [
+                'country' => 'China',
+                'language' => 'Chinês',
+                'file' => 'china',
+            ],
+        ];
+
+        $language = (array_key_exists($code, $language_codes) === true) ? $language_codes[$code] : [];
+        return $language;
+    }
+}
+
+if (!function_exists('truncate_text_at_word')) {
+
+    /**
+     * Truncate text at word
+     *
+     * @param mixed $string
+     * @param mixed $limit
+     * @param string $break
+     * @param string $pad
+     * @return mixed
+     */
+    function truncate_text_at_word($string, $limit, $break = ".", $pad = "...")
+    {
+        if (strlen($string) <= $limit) {
+            return $string;
+        }
+        if (false !== ($max = strpos($string, $break, $limit))) {
+            if ($max < strlen($string) - 1) {
+                $string = substr($string, 0, $max) . $pad;
+            }
+        }
+        return $string;
+    }
+}
+
+if (!function_exists('check_remote_file')) {
+
+    /**
+     * Check if remote file exists
+     *
+     * @param string $url
+     * @return bool
+     */
+    function check_remote_file($url)
+    {
+        $content_type = '';
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_HEADER, 1);
+        curl_setopt($ch, CURLOPT_NOBODY, 1);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+        $results = explode("\n", trim(curl_exec($ch)));
+        foreach ($results as $line) {
+            if (strtolower(strtok($line, ':')) == 'content-type') {
+                $parts = explode(":", $line);
+                $content_type = trim($parts[1]);
+            }
+        }
+        curl_close($ch);
+        $status = strpos($content_type, 'image') !== false;
+
+        return $status;
+    }
+}
+
+if (!function_exists('only_numbers')) {
+    /**
+     * Returns only numbers
+     *
+     * @param string $number
+     * @return string
+     */
+    function only_numbers($number)
+    {
+        return (string) preg_replace('/\D/', '', $number);
+    }
+}
+
+if (!function_exists('generateAvatar')) {
+    /**
+     * Generate avatar by user name
+     *
+     * @param string $fullname
+     * @return string
+     */
+    function generateAvatar($fullname)
+    {
+        $avatarName = urlencode("{$fullname}");
+        return "https://ui-avatars.com/api/?name={$avatarName}&background=838383&color=FFFFFF&size=140&rounded=true";
+    }
+}
+
+if (!function_exists('get_payment_status')) {
+    /**
+     * Get status message
+     *
+     * @param string $code
+     * @return string
+     */
+    function get_payment_status($code)
+    {
+        switch($code) {
+            case 'processing':
+                $status = 'Em processo';
+                break;
+            case 'authorized':
+                $status = 'Autorizada';
+                break;
+            case 'paid':
+                $status = 'Aprovado';
+                break;
+            case 'refunded':
+                $status = 'Estornada';
+                break;
+            case 'waiting_payment':
+                $status = 'Aguardando pagamento';
+                break;
+            case 'pending_refund':
+                $status = 'Estorno boleto';
+                break;
+            case 'refused':
+                $status = 'Recusado';
+                break;
+            case 'chargedback':
+                $status = 'Chargeback';
+                break;
+            case 'analyzing':
+                $status = 'Em análise';
+                break;
+            case 'pending_review':
+                $status = 'Em revisão';
+                break;
+            default:
+                $status = '';
+        }
+
+        return $status;
+    }
+}
+
+if (!function_exists('get_payment_type')) {
+    /**
+     * Get payment type
+     *
+     * @param string $type
+     * @return string
+     */
+    function get_payment_type($type)
+    {
+        switch($type) {
+            case 'credit_card':
+                $payment_type = 'Cartão de crédito';
+                break;
+            case 'boleto':
+                $payment_type = 'Boleto';
+                break;
+            default:
+                $payment_type = '';
+        }
+
+        return $payment_type;
+    }
+}

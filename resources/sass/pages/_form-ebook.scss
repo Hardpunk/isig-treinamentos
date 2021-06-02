@@ -1,0 +1,52 @@
+section#ebook__wrapper {
+    background: #35364c url("/images/texture.png");
+    color: white !important;
+
+    .card {
+        background: none;
+        border: none;
+        .card-body {
+            > span {
+                padding: 10px 15px;
+                @include font-size(24px);
+            }
+
+            form#form-ebook {
+                button {
+                    width: 150px;
+                    @include font-size(14px);
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    section#ebook__wrapper {
+        .card {
+            .card-body {
+                h4 {
+                    @include font-size(18px);
+                }
+                span {
+                    @include font-size(18px)
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-only(md) {
+    section#ebook__wrapper {
+        .card {
+            .card-body {
+                h4 {
+                    @include font-size(18px);
+                }
+                span {
+                    @include font-size(24px)
+                }
+            }
+        }
+    }
+}
