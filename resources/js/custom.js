@@ -66,4 +66,6 @@ $(function() {
     });
 
     $('.search-wrapper form').on('submit', doSearch);
+
+    var scroll = new SmoothScroll('a[href*="#"]');
 });

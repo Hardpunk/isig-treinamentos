@@ -3,13 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Plan;
 use App\Trail;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Redirector;
 use Illuminate\View\View;
 
-class PageController extends CourseController
+class PageController extends Controller
 {
     /**
      * @param Request $request
@@ -17,14 +16,17 @@ class PageController extends CourseController
      */
     public function home(Request $request)
     {
-        $cursos_destaque = Category::whereIn('category_id', [47,28,14,44,4,24,18,36,13,25,38,23])->get();
+        $arrayCursos = [47, 28, 14, 44, 4, 24, 18, 36, 13, 25, 38, 23];
+        $cursos_destaque = Category::whereIn('category_id', $arrayCursos)->get();
         $categorias = Category::all();
         $trilhas = Trail::with('courses')->get();
+        $planos = Plan::all();
 
         return view('index', [
             'categorias' => $categorias,
             'destaques' => $cursos_destaque,
             'trilhas' => $trilhas,
+            'planos' => $planos
         ]);
     }
 
@@ -35,11 +37,13 @@ class PageController extends CourseController
     {
         return view('pages.condicoes-gerais');
     }
+
     public function empresas()
     {
         return view('pages.para-empresas');
     }
-        public function contato()
+
+    public function contato()
     {
         return view('pages.contato');
     }

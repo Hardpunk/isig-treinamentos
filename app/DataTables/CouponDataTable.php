@@ -2,11 +2,11 @@
 
 namespace App\DataTables;
 
-use App\Models\Affiliate;
+use App\Coupon;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 
-class AffiliateDataTable extends DataTable
+class CouponDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -18,16 +18,16 @@ class AffiliateDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'affiliates.datatables_actions');
+        return $dataTable->addColumn('action', 'coupons.datatables_actions');
     }
 
     /**
      * Get query source of dataTable.
      *
-     * @param \App\Models\Affiliate $model
+     * @param \App\Models\Coupon $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(Affiliate $model)
+    public function query(Coupon $model)
     {
         return $model->newQuery();
     }
@@ -74,38 +74,41 @@ class AffiliateDataTable extends DataTable
     {
         return [
             'id' => [
-                'data' => 'id',
                 'title' => '#ID',
-                'width' => '60px',
                 'searchable' => false,
-                'orderable' => true,
-                'className' => 'text-center',
+                'width' => '60px',
+                'className' => 'text-center'
             ],
-            'name' => [
-                'data' => 'name',
-                'title' => 'Nome',
-                'searchable' => true,
-                'orderable' => true,
+            'title' => [
+                'title' => 'Título',
+                'searchable' => false,
             ],
-            'slug' => [
-                'data' => 'slug',
-                'title' => 'Código do afiliado',
+            'code' => [
+                'title' => 'Código Cupom',
                 'searchable' => true,
                 'orderable' => false,
-                'render' => function() {
-                    return 'function ( data, type, row ) {
-                        return "<p class=\"m-0\">'.config('app.url').'/?f=" + data + " <a href=\"'.config('app.url').'/?f=" + data + "\" class=\"btn btn-xs btn-success ml-3 copy\">Copiar link</a></p>";
-                    }';
-                },
+            ],
+            'discount' => [
+                'width' => '120px',
+                'title' => 'Desconto (%)',
+                'className' => 'text-center',
+                'searchable' => false,
+                'orderable' => false,
+            ],
+            'limit' => [
+                'width' => '120px',
+                'title' => 'Limite de Uso',
+                'className' => 'text-center',
+                'searchable' => false,
+                'orderable' => false,
             ],
             'times_used' => [
-                'data' => 'times_used',
-                'title' => 'Qtdes. usadas',
-                'width' => '180px',
+                'width' => '100px',
+                'title' => 'Usados',
+                'className' => 'text-center',
                 'searchable' => false,
                 'orderable' => false,
-                'className' => 'text-center',
-            ],
+            ]
         ];
     }
 
@@ -116,6 +119,6 @@ class AffiliateDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'affiliates_datatable_' . time();
+        return 'coupons_datatable_' . time();
     }
 }

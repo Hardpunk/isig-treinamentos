@@ -28,6 +28,8 @@ Route::prefix('painel')->name('admin.')->group(function () {
             });
             Route::resource('affiliates', 'AffiliateController')->except(['show']);
             Route::resource('payments', 'PaymentController')->only(['index', 'show']);
+            Route::resource('coupons', 'CouponController');
+            Route::resource('plans', 'PlanController')->except(['create', 'store','show', 'destroy']);
         });
     });
 });
@@ -59,16 +61,22 @@ Route::middleware('auth:user')->group(function () {
 
     Route::group(['prefix' => '/checkout'], function () {
         Route::get('/', 'CheckoutController@index')->name('checkout.index');
+        Route::get('/plan/{plan}', 'CheckoutController@plan')->name('checkout.plan');
         Route::get('/confirmation/{order}', 'CheckoutController@confirmation')->name('checkout.confirmation');
         Route::post('/payment', 'CheckoutController@payment')->name('checkout.payment');
+        Route::post('/addCoupon', 'CheckoutController@addCoupon')->name('checkout.addCoupon');
     });
 });
 
 Route::get('/', 'PageController@home')->name('home');
 
-Route::get('/search', 'SearchController@search')->name('search');
+Route::get('/contato', 'PageController@contato')->name('contato');
 
-Route::get('/termos-de-uso', 'PageController@termos')->name('termos-de-uso');
+Route::get('/para-empresas', 'PageController@empresas')->name('empresas');
+
+// Route::get('/termos-de-uso', 'PageController@termos')->name('termos-de-uso');
+
+Route::get('/search', 'SearchController@search')->name('search');
 
 Route::group(['prefix' => '/cursos'], function () {
     Route::get('/', 'CourseController@index')->name('courses.index');
@@ -104,7 +112,3 @@ Route::group(['prefix' => '/cron'], function () {
     Route::get('/category_sync/', 'CourseController@categorySync')->name('cronjobs.category_sync');
     Route::get('/category_courses_sync', 'CourseController@categoryCourses')->name('cronjobs.category_courses_sync');
 });
-
-Route::get('/para-empresas', 'PageController@empresas')->name('empresas');
-
-Route::get('/contato', 'PageController@contato')->name('contato');

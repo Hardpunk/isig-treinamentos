@@ -1,4 +1,3 @@
-@include('includes._header-common')
 @include('includes._header-home')
 
 @if(Route::current()->getName() !== 'home')

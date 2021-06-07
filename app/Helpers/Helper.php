@@ -235,7 +235,7 @@ if (!function_exists('get_payment_status')) {
      */
     function get_payment_status($code)
     {
-        switch($code) {
+        switch ($code) {
             case 'processing':
                 $status = 'Em processo';
                 break;
@@ -283,7 +283,7 @@ if (!function_exists('get_payment_type')) {
      */
     function get_payment_type($type)
     {
-        switch($type) {
+        switch ($type) {
             case 'credit_card':
                 $payment_type = 'Cartão de crédito';
                 break;
@@ -295,5 +295,41 @@ if (!function_exists('get_payment_type')) {
         }
 
         return $payment_type;
+    }
+}
+
+/**
+ * Number round hack
+ *
+ * @param string $type
+ * @return string
+ */
+if (!function_exists('numberFormatPrecision')) {
+    function numberFormatPrecision($number, $precision = 2, $separator = '.', $replace = ',')
+    {
+        $numberParts = explode($separator, $number);
+        $response = $numberParts[0];
+        if (count($numberParts) > 1 && $precision > 0) {
+            $response .= $replace;
+            $response .= substr($numberParts[1], 0, $precision);
+        }
+        return $response;
+    }
+}
+
+if (!function_exists('round_up')) {
+    function round_up($number, $precision = 2)
+    {
+        $fig = (int) str_pad('1', $precision, '0');
+        $rounded = (ceil($number * $fig) / $fig);
+        return number_format($rounded, 2, ',', '.');
+    }
+}
+if (!function_exists('round_down')) {
+    function round_down($number, $precision = 2)
+    {
+        $fig = (int) str_pad('1', $precision, '0');
+        $rounded = (floor($number * $fig) / $fig);
+        return number_format($rounded, 2, ',', '.');
     }
 }

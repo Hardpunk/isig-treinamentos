@@ -62,16 +62,44 @@ function recaptchaCallback() {
                         </table>
                     </div>
 
-                    <div class="pt-4 mt-1 border-top border-dark">
-                        <div class="row">
-                            <div class="col-md-6 text-center text-sm-left">
+                    <div class="pt-3 mt-1 border-top border-dark">
+                        <div class="row mb-4 mb-sm-3">
+                            <div class="col-md-12 text-right">
+                                @if(!empty($coupon))
+                                <div class="justify-content-center justify-content-md-end rounded px-3 py-2 bg-success d-inline-block">
+                                    <h5 class="m-0 text-white font-weight-bold">
+                                        CUPOM APLICADO: {{ mb_strtoupper($coupon['code']) }}
+                                    </h5>
+                                </div>
+                                @else
+                                <form id="add-coupon" action="{{ route('checkout.addCoupon') }}"
+                                    class="form-inline justify-content-center justify-content-md-end"
+                                    method="POST" role="form">
+                                    @csrf
+                                    <div class="form-group mb-0">
+                                        <label for="coupon" class="font-weight-bold mb-0">CÓDIGO CUPOM</label>
+                                    </div>
+                                    <div class="form-group mx-2 mb-0">
+                                        <input id="coupon" type="text" name="code" class="form-control" />
+                                    </div>
+                                    <button type="button" class="btn btn-success rounded add-coupon-button"
+                                        data-loading-text="<i class='fas fa-spinner fa-spin mr-2'></i>Aguarde...">OK</button>
+                                </form>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-sm-6 text-center text-sm-left">
                                 <div class="select-courses-link">
                                     <a href="/" class="btn-link btn-theme select-courses-button font-weight-bold">Escolher mais cursos</a>
                                 </div>
                             </div>
-                            <div class="col-md-6 text-center text-sm-right mt-3 mt-sm-0">
-                                <h4 class="font-weight-bold">Total: R$ <label id="totalCost">{{ number_format($valor_total, 2, ',', '.') }}</label></h4>
-                                <h6 class="font-weight-bold theme-text-color">OU EM 10x DE R${{ number_format(round(($valor_total/10), 2), 2, ',', '.') }}</h6>
+                            <div class="col-sm-6 text-center text-sm-right mt-3 mt-sm-0">
+                                @if(!empty($coupon))
+                                <h5 class="font-weight-bold mb-1 text-right text-success">Cupom ({{ number_format($coupon['discount'], 2, ',', '.')."%" }}): -R$ {{ number_format(($valor_total * ($coupon['discount']/100)), 2, ',', '.') }}</h5>
+                                @endif
+                                <h4 class="font-weight-bold mb-2">Total: R$ <label class="m-0" id="totalCost">{{ number_format(($valor_total * $coupon_discount), 2, ',', '.') }}</label></h4>
+                                <h6 class="font-weight-bold theme-text-color mb-0">OU EM 10x DE R$ {{ number_format((($valor_total * $coupon_discount)/10), 2, ',', '.') }}</h6>
                             </div>
                         </div>
                     </div>
@@ -274,7 +302,7 @@ function recaptchaCallback() {
                                                         <div class="card-body">
                                                             @for($i = 1; $i <= 10; $i++)
                                                             <label class="installment-number d-flex align-items-center">
-                                                                <input type="radio" class="mr-2" value="{{ $i }}" name="cc_installments" {{ $i === 1 ? 'checked' : '' }}>{{ $i }} x&nbsp;<strong>R$ {{ number_format(($valor_total / $i), 2, ',', '.') }} </strong>&nbsp;sem juros
+                                                                <input type="radio" class="mr-2" value="{{ $i }}" name="cc_installments" {{ $i === 1 ? 'checked' : '' }}>{{ $i }} x&nbsp;<strong>R$ {{ number_format((($valor_total * $coupon_discount)/$i), 2, ',', '.') }} </strong>&nbsp;sem juros
                                                             </label>
                                                             @endfor
                                                         </div>

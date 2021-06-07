@@ -36,9 +36,9 @@
                     <tr>
                         <td class="header"
                             style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 10px 0; text-align: center;">
-                            <a href="https://www.inagroacademy.com" target="_blank">
-                                <img src="https://www.inagroacademy.com/images/logo-small.png"
-                                    alt="InAgro Academy" title="InAgro Academy"
+                            <a href="https://www.isigtreinamentos.com.br" target="_blank">
+                                <img src="https://www.isigtreinamentos.com.br/images/logo-small.png"
+                                    alt="{{ config('app.name') }}" title="{{ config('app.name') }}"
                                     style="width: 200px;" />
                             </a>
                         </td>
@@ -86,7 +86,7 @@
                                                     <p
                                                         style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; margin-top: 15px; text-align: left;">
                                                         Atenciosamente,<br>
-                                                        InAgro Academy.</p>
+                                                        {{ config('app.name') }}.</p>
                                                 </td>
                                             </tr>
                                         </table>
@@ -97,7 +97,7 @@
                                                 <td align="center" valign="top">
                                                     <p
                                                         style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; margin-top: 15px; text-align: left;">
-                                                        <span>contato@inagroacademy.com</span>
+                                                        <span>contato@isigtreinamentos.com.br</span>
                                                     </p>
                                                     <p
                                                         style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; text-align: left;">
@@ -120,7 +120,7 @@
                                         style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 15px;">
                                         <p
                                             style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; line-height: 1.5em; margin-top: 0; color: #aeaeae; font-size: 12px; text-align: center;">
-                                            © {{ date('Y') }} InAgro Academy. Todos os direitos reservados.</p>
+                                            © {{ date('Y') }} {{ config('app.name') }}. Todos os direitos reservados.</p>
                                     </td>
                                 </tr>
                             </table>

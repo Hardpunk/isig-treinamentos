@@ -27,15 +27,19 @@ class CreateCoursesTable extends Migration
             $table->string('captions');
             $table->integer('hours');
             $table->text('topics');
-            $table->string('video');
-            $table->string('image');
-            $table->string('background');
-            $table->text('slideshow');
+            $table->string('video')->nullable();
+            $table->string('image')->nullable();
+            $table->string('background')->nullable();
+            $table->text('slideshow')->nullable();
             $table->string('teacher_name')->nullable();
             $table->longText('teacher_description')->nullable();
             $table->string('teacher_image')->nullable();
             $table->timestamps();
             $table->softDeletes();
+
+            $table->foreign('category_id')
+                ->references('category_id')
+                ->on('categories')->onDelete('cascade');
         });
     }
 

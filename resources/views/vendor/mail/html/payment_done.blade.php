@@ -36,9 +36,9 @@
                     <tr>
                         <td class="header"
                             style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 10px 0; text-align: center;">
-                            <a href="https://www.inagroacademy.com" target="_blank">
-                                <img src="https://www.inagroacademy.com/images/logo-small.png"
-                                    alt="InAgro Academy" title="InAgro Academy"
+                            <a href="https://www.isigtreinamentos.com.br" target="_blank">
+                                <img src="https://www.isigtreinamentos.com.br/images/logo-small.png"
+                                    alt="{{ config('app.name') }}" title="{{ config('app.name') }}"
                                     style="width: 200px;" />
                             </a>
                         </td>
@@ -59,7 +59,7 @@
 
                                         <p
                                             style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; margin-top: 0; text-align: left;">
-                                            Sua matrícula na <strong>InAgro Academy</strong> foi efetuada com sucesso!
+                                            Sua matrícula na <strong>{{ config('app.name') }}</strong> foi efetuada com sucesso!
                                         </p>
 
                                         <table class="panel" width="100%" cellpadding="0" cellspacing="0"
@@ -115,10 +115,10 @@
                                                                     <tr>
                                                                         <td
                                                                             style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
-                                                                            <a href="https://www.sie.com.br/inagro"
+                                                                            <a href="https://www.sie.com.br/isig-treinamentos"
                                                                                 class="button button-acim"
                                                                                 target="_blank"
-                                                                                style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-radius: 3px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); color: #ffffff; display: inline-block; text-decoration: none; -webkit-text-size-adjust: none; background-color: #0c6c4f; border-top: 10px solid #0c6c4f; border-right: 18px solid #0c6c4f; border-bottom: 10px solid #0c6c4f; border-left: 18px solid #0c6c4f;">InAgro Academy</a>
+                                                                                style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-radius: 3px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); color: #ffffff; display: inline-block; text-decoration: none; -webkit-text-size-adjust: none; background-color: #0c6c4f; border-top: 10px solid #0c6c4f; border-right: 18px solid #0c6c4f; border-bottom: 10px solid #0c6c4f; border-left: 18px solid #0c6c4f;">{{ config('app.name') }}</a>
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -147,7 +147,7 @@
                                                                         style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 0;">
                                                                         <p
                                                                             style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; margin-top: 0; text-align: center; margin-bottom: 0; padding-bottom: 0;">
-                                                                            https://www.sie.com.br/inagro</p>
+                                                                            https://www.sie.com.br/isig-treinamentos</p>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
@@ -160,21 +160,21 @@
                                         <p
                                             style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; margin-top: 30px; text-align: left;">
                                             Atenciosamente,<br>
-                                            InAgro Academy.</p>
+                                            {{ config('app.name') }}.</p>
 
                                         <p
                                             style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; margin-top: 15px; text-align: center;">
-                                            <a href="mailto:contato@inagroacademy.com" title="contato@inagroacademy.com"
+                                            <a href="mailto:contato@isigtreinamentos.com.br" title="contato@isigtreinamentos.com.br"
                                                 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; text-align: center; display: inline-block;"
                                                 target="_blank">
-                                                contato@inagroacademy.com
+                                                contato@isigtreinamentos.com.br
                                             </a>
                                         </p>
                                         <p
                                             style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; text-align: center;">
                                             <a href="https://wa.me/5544999442200" title="Atendimento 1 (44) 99944-2200"
                                                 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; vertical-align: middle; text-align: center; display: inline-block;"
-                                                target="_blank">Whatsapp Atendimento 1
+                                                target="_blank">Whatsapp
                                             </a>
                                         </p>
                                     </td>
@@ -191,7 +191,7 @@
                                         style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 15px;">
                                         <p
                                             style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; line-height: 1.5em; margin-top: 0; color: #aeaeae; font-size: 12px; text-align: center;">
-                                            © {{ date('Y') }} InAgro Academy. Todos os direitos reservados.</p>
+                                            © {{ date('Y') }} {{ config('app.name') }}. Todos os direitos reservados.</p>
                                     </td>
                                 </tr>
                             </table>

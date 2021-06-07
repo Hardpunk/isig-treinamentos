@@ -354,6 +354,8 @@ $(function() {
         var $cartContainer = $('.cart-button.has-items .nav-link.cart').parent();
         toggleCartContainer($cartContainer);
     });
+
+    var scroll = new SmoothScroll('a[href*="#"]');
 });
 
 $(document).on('click', '.cart-button.has-items .nav-link.cart', click_openCartDetails);
