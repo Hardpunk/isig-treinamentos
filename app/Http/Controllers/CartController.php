@@ -14,35 +14,9 @@ class CartController extends Controller
 {
     public function index(Request $request)
     {
-        $cart = [];
         $expires = 60 * 24 * 30;
         if (!$request->hasCookie('cart')) {
             cookie('cart', json_encode([]), $expires);
-        } else {
-            $cookie = json_decode($request->cookie('cart'), true);
-
-            if (count($cookie) > 0) {
-                foreach ($cookie as $key => $value) {
-                    /* foreach ($tamanhos as $tamanho_id => $tamanho) {
-                $produto = Produto::whereId($produto_id)
-                ->with(['tamanhos', 'categoria'])
-                ->first(['id', 'categoria_id', 'titulo', 'slug', 'imagem']);
-                $produto->imagem = url(get_small_image('/uploads/produtos/', $produto->imagem));
-                $produto->valor_vista = $produto->tamanhos
-                ->where('id', '=', $tamanho_id)
-                ->first()
-                ->pivot
-                ->valor_vista;
-                $produto->tamanho = $produto->tamanhos
-                ->where('id', '=', $tamanho_id)
-                ->first()->titulo;
-                $produto->tamanho_id = $tamanho_id;
-                $produto->quantidade = $tamanho['quantidade'];
-                $produto->categoria_slug = $produto->categoria->slug;
-                $produtos[] = $produto;
-                } */
-                }
-            }
         }
         $produtos = [];
         return view('pages.cart.index', ['produtos' => $produtos]);

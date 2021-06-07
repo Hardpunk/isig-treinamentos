@@ -76,7 +76,7 @@ class Payment extends Model
      */
     public function Trails()
     {
-        return $this->belongsToMany(Trail::class, 'payments_items');
+        return $this->belongsToMany(Trail::class, 'payments_items')->withTimestamps();
     }
 
     /**
@@ -86,7 +86,17 @@ class Payment extends Model
      */
     public function Courses()
     {
-        return $this->belongsToMany(Course::class, 'payments_items');
+        return $this->belongsToMany(Course::class, 'payments_items')->withTimestamps();
+    }
+
+    /**
+     * Return Plans
+     *
+     * @return BelongsToMany
+     */
+    public function Plans()
+    {
+        return $this->belongsToMany(Plan::class, 'payments_items')->withTimestamps();
     }
 
     /**

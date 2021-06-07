@@ -28,25 +28,25 @@
     <![endif]-->
 
     <link rel="canonical" href="/" />
-    <meta name="description" content="ISIG Treinamentos">
+    <meta name="description" content="{{ config('app.name') }}">
     <meta name="keywords" content="">
-    <meta name="author" content="ISIG">
+    <meta name="author" content="{{ config('app.name') }}">
 
     <!-- og tags -->
     <meta property='og:type' content='website'/>
     <meta property="og:locale" content="pt_BR">
-    <meta property='og:title' content="ISIG Treinamentos"/>
+    <meta property='og:title' content="{{ config('app.name') }}"/>
     <meta property='og:url' content='/'/>
-    <meta property='og:description' content='ISIG Treinamentos'/>
-    <meta property='og:site_name' content='ISIG Treinamentos'/>
+    <meta property='og:description' content='{{ config('app.name') }}'/>
+    <meta property='og:site_name' content='{{ config('app.name') }}'/>
     <meta property='og:image' content="{{ asset('images/favicon/ms-icon-144x144.png') }}"/>
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="144">
     <meta property="og:image:height" content="144">
 
     <!-- Schema -->
-    <meta itemprop="name" content="ISIG">
-    <meta itemprop="description" content="ISIG">
+    <meta itemprop="name" content="{{ config('app.name') }}">
+    <meta itemprop="description" content="{{ config('app.name') }}">
 
     <!-- ICONES -->
     <link rel="shortcut icon" href="{{ asset('images/favicon/favicon.ico') }}" type="image/x-icon">
@@ -108,7 +108,8 @@
     </script>
 
     <!-- Scripts Gerais -->
-    <script src=" {{ asset('vendor/tooltipster/dist/js/tooltipster.bundle.min.js') }}"></script>
+    <script src="//cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="{{ asset('vendor/tooltipster/dist/js/tooltipster.bundle.min.js') }}"></script>
     <script src="{{ asset('vendor/owl.carousel/dist/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('js/jquery.mask.js') }}"></script>
 

@@ -174,7 +174,7 @@ return [
         'country' => 'País',
         'description' => 'Descrição',
         'price' => 'Valor',
-        'months' => 'Meses Assinatura',
+        'months' => 'Meses',
         'student_id' => 'Aluno',
         'plan_id' => 'Plano',
         'subscription_id' => 'Código da Assinatura',
@@ -186,6 +186,8 @@ return [
         'recaptcha' => 'captcha',
         'birthday' => 'Data de nascimento',
         'lastname' => 'Sobrenome',
+        'amount' => 'Valor',
+        'installment_amount' => 'Valor parcelado',
     ],
 
 ];

@@ -1,97 +1,11 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
-/******/ })
-/************************************************************************/
-/******/ ({
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js":
 /*!******************************************************************!*\
   !*** ./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js ***!
   \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (() => {
 
 // ==================================================
 // fancyBox v3.5.7
@@ -5732,8 +5646,7 @@
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
   \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__(/*! ./lib/axios */ "./node_modules/axios/lib/axios.js");
 
@@ -5743,8 +5656,7 @@ module.exports = __webpack_require__(/*! ./lib/axios */ "./node_modules/axios/li
 /*!************************************************!*\
   !*** ./node_modules/axios/lib/adapters/xhr.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -5934,8 +5846,7 @@ module.exports = function xhrAdapter(config) {
 /*!*****************************************!*\
   !*** ./node_modules/axios/lib/axios.js ***!
   \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -6002,8 +5913,7 @@ module.exports.default = axios;
 /*!*************************************************!*\
   !*** ./node_modules/axios/lib/cancel/Cancel.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -6033,8 +5943,7 @@ module.exports = Cancel;
 /*!******************************************************!*\
   !*** ./node_modules/axios/lib/cancel/CancelToken.js ***!
   \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -6102,8 +6011,7 @@ module.exports = CancelToken;
 /*!***************************************************!*\
   !*** ./node_modules/axios/lib/cancel/isCancel.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -6119,8 +6027,7 @@ module.exports = function isCancel(value) {
 /*!**********************************************!*\
   !*** ./node_modules/axios/lib/core/Axios.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -6226,8 +6133,7 @@ module.exports = Axios;
 /*!***********************************************************!*\
   !*** ./node_modules/axios/lib/core/InterceptorManager.js ***!
   \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -6290,8 +6196,7 @@ module.exports = InterceptorManager;
 /*!******************************************************!*\
   !*** ./node_modules/axios/lib/core/buildFullPath.js ***!
   \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -6322,8 +6227,7 @@ module.exports = function buildFullPath(baseURL, requestedURL) {
 /*!****************************************************!*\
   !*** ./node_modules/axios/lib/core/createError.js ***!
   \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -6352,8 +6256,7 @@ module.exports = function createError(message, config, code, request, response) 
 /*!********************************************************!*\
   !*** ./node_modules/axios/lib/core/dispatchRequest.js ***!
   \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -6443,8 +6346,7 @@ module.exports = function dispatchRequest(config) {
 /*!*****************************************************!*\
   !*** ./node_modules/axios/lib/core/enhanceError.js ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -6497,8 +6399,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 /*!****************************************************!*\
   !*** ./node_modules/axios/lib/core/mergeConfig.js ***!
   \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -6596,8 +6497,7 @@ module.exports = function mergeConfig(config1, config2) {
 /*!***********************************************!*\
   !*** ./node_modules/axios/lib/core/settle.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -6633,8 +6533,7 @@ module.exports = function settle(resolve, reject, response) {
 /*!******************************************************!*\
   !*** ./node_modules/axios/lib/core/transformData.js ***!
   \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -6665,11 +6564,11 @@ module.exports = function transformData(data, headers, fns) {
 /*!********************************************!*\
   !*** ./node_modules/axios/lib/defaults.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
+/* provided dependency */ var process = __webpack_require__(/*! process/browser */ "./node_modules/process/browser.js");
+
 
 var utils = __webpack_require__(/*! ./utils */ "./node_modules/axios/lib/utils.js");
 var normalizeHeaderName = __webpack_require__(/*! ./helpers/normalizeHeaderName */ "./node_modules/axios/lib/helpers/normalizeHeaderName.js");
@@ -6768,7 +6667,6 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -6776,8 +6674,7 @@ module.exports = defaults;
 /*!************************************************!*\
   !*** ./node_modules/axios/lib/helpers/bind.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -6799,8 +6696,7 @@ module.exports = function bind(fn, thisArg) {
 /*!****************************************************!*\
   !*** ./node_modules/axios/lib/helpers/buildURL.js ***!
   \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -6881,8 +6777,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 /*!*******************************************************!*\
   !*** ./node_modules/axios/lib/helpers/combineURLs.js ***!
   \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -6907,8 +6802,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 /*!***************************************************!*\
   !*** ./node_modules/axios/lib/helpers/cookies.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -6972,8 +6866,7 @@ module.exports = (
 /*!*********************************************************!*\
   !*** ./node_modules/axios/lib/helpers/isAbsoluteURL.js ***!
   \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -6998,8 +6891,7 @@ module.exports = function isAbsoluteURL(url) {
 /*!********************************************************!*\
   !*** ./node_modules/axios/lib/helpers/isAxiosError.js ***!
   \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -7021,8 +6913,7 @@ module.exports = function isAxiosError(payload) {
 /*!***********************************************************!*\
   !*** ./node_modules/axios/lib/helpers/isURLSameOrigin.js ***!
   \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -7101,8 +6992,7 @@ module.exports = (
 /*!***************************************************************!*\
   !*** ./node_modules/axios/lib/helpers/normalizeHeaderName.js ***!
   \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -7125,8 +7015,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 /*!********************************************************!*\
   !*** ./node_modules/axios/lib/helpers/parseHeaders.js ***!
   \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -7190,8 +7079,7 @@ module.exports = function parseHeaders(headers) {
 /*!**************************************************!*\
   !*** ./node_modules/axios/lib/helpers/spread.js ***!
   \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -7229,8 +7117,7 @@ module.exports = function spread(callback) {
 /*!*****************************************!*\
   !*** ./node_modules/axios/lib/utils.js ***!
   \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -7588,12 +7475,633 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./resources/js/bootstrap.js":
+/*!***********************************!*\
+  !*** ./resources/js/bootstrap.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/**
+ * We'll load jQuery and the Bootstrap jQuery plugin which provides support
+ * for JavaScript based Bootstrap features such as modals and tabs. This
+ * code may be modified to fit the specific needs of your application.
+ */
+
+try {
+  window.Popper = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js").default;
+  window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
+  __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
+} catch (e) {}
+/**
+ * We'll load the axios HTTP library which allows us to easily issue requests
+ * to our Laravel back-end. This library automatically handles sending the
+ * CSRF token as a header based on the value of the "XSRF" token cookie.
+ */
+
+
+window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+/**
+ * Next we will register the CSRF Token as a common header with Axios so that
+ * all outgoing HTTP requests automatically have it attached. This is just
+ * a simple convenience so we don't have to attach every token manually.
+ */
+
+var token = document.head.querySelector('meta[name="csrf-token"]');
+
+if (token) {
+  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+  /*$.ajaxSetup({
+      headers: {
+          'X-CSRF-TOKEN': token.content
+      }
+  });*/
+}
+/**
+ * Echo exposes an expressive API for subscribing to channels and listening
+ * for events that are broadcast by Laravel. Echo and event broadcasting
+ * allows your team to easily build robust real-time web applications.
+ */
+// import Echo from 'laravel-echo';
+// window.Pusher = require('pusher-js');
+// window.Echo = new Echo({
+//     broadcaster: 'pusher',
+//     key: process.env.MIX_PUSHER_APP_KEY,
+//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+//     forceTLS: true
+// });
+
+/***/ }),
+
+/***/ "./resources/js/checkout/checkout_payment.js":
+/*!***************************************************!*\
+  !*** ./resources/js/checkout/checkout_payment.js ***!
+  \***************************************************/
+/***/ (() => {
+
+function roundNumber(e, t) {
+  if (!t) return Math.round(e);
+
+  if (0 == e) {
+    for (var o = "", a = 0; a < t; a++) {
+      o += "0";
+    }
+
+    return "0," + o;
+  }
+
+  if (e > 0 && e < 1) {
+    var r = Math.pow(10, t);
+    return "0," + Math.round(e * r).toString().slice(-1 * t);
+  }
+
+  var n = Math.pow(10, t),
+      l = Math.round(e * n).toString();
+  return l.slice(0, -1 * t) + "," + l.slice(-1 * t);
+}
+
+function number_format(e, t, o, a) {
+  e = (e + "").replace(/[^0-9+\-Ee.]/g, "");
+  var r = isFinite(+e) ? +e : 0,
+      n = isFinite(+t) ? Math.abs(t) : 0,
+      l = void 0 === a ? "," : a,
+      i = void 0 === o ? "." : o,
+      u = "";
+  return u = (n ? function (e, t) {
+    var o = Math.pow(10, t);
+    return "" + (Math.round(e * o) / o).toFixed(t);
+  }(r, n) : "" + Math.round(r)).split("."), u[0].length > 3 && (u[0] = u[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, l)), (u[1] || "").length < n && (u[1] = u[1] || "", u[1] += new Array(n - u[1].length + 1).join("0")), u.join(i);
+}
+
+function validaCard(e) {
+  flag = !0, x = document.getElementById("cardNumberEr"), "" != e.value && (flag = validaCartao(e.value.replace(/\D/g, ""))), flag ? (x.style.display = "none", e.style.borderColor = "rgb(150, 162, 185)") : (x.style.display = "block", e.style.borderColor = "rgb(200, 0, 0)");
+}
+
+function validaCod(e) {
+  var t = e.value.replace(/\D/g, "");
+  return e.value.length != t.length ? (x = document.getElementById("codVerifyEr"), x.style.display = "block", e.style.borderColor = "rgb(200, 0, 0)", !1) : (flag = !0, "" != e.value && e.maxLength != e.value.length && (flag = !1), x = document.getElementById("codVerifyEr"), flag ? (x.style.display = "none", e.style.borderColor = "rgb(150, 162, 185)", !0) : (x.style.display = "block", e.style.borderColor = "rgb(200, 0, 0)", !1));
+}
+
+function validaNome(e) {
+  flag = !0, x = document.getElementById("nomeEr"), "" != e.value && (flag = isString(e.value)), flag ? (x.style.display = "none", e.style.borderColor = "rgb(150, 162, 185)") : (x.style.display = "block", e.style.borderColor = "rgb(200, 0, 0)");
+}
+
+function validaCPF(e) {
+  flag = !0, "" != e.value && (flag = validaDoc(e.value)), x = document.getElementById("cpfEr"), flag ? (x.style.display = "none", e.style.borderColor = "rgb(150, 162, 185)") : (x.style.display = "block", e.style.borderColor = "rgb(200, 0, 0)");
+}
+
+function validaCpf(e) {
+  var t = "";
+
+  for (i = 0; i < e.length; i++) {
+    switch (e.charAt(i)) {
+      case "0":
+      case "1":
+      case "2":
+      case "3":
+      case "4":
+      case "5":
+      case "6":
+      case "7":
+      case "8":
+      case "9":
+        t += e.charAt(i);
+    }
+  }
+
+  if (e = t, 11 != e.length || "00000000000" == e || "11111111111" == e || "22222222222" == e || "33333333333" == e || "44444444444" == e || "55555555555" == e || "66666666666" == e || "77777777777" == e || "88888888888" == e || "99999999999" == e) return !1;
+
+  for (add = 0, i = 0; i < 9; i++) {
+    add += parseInt(e.charAt(i)) * (10 - i);
+  }
+
+  if (rev = 11 - add % 11, 10 != rev && 11 != rev || (rev = 0), rev != parseInt(e.charAt(9))) return !1;
+
+  for (add = 0, i = 0; i < 10; i++) {
+    add += parseInt(e.charAt(i)) * (11 - i);
+  }
+
+  return rev = 11 - add % 11, 10 != rev && 11 != rev || (rev = 0), rev == parseInt(e.charAt(10));
+}
+
+function isString(e) {
+  return "string" == typeof e;
+}
+
+function isNumber(e) {
+  return "number" == typeof e;
+}
+
+function loadingButton() {
+  var e = $("#buttCard,#buttBoleto,#buttBanco");
+  e.prop("disabled", !0), e.html("<i class='fa fa-spinner fa-spin fa-2x fa-fw'></i>");
+}
+
+function resetButton() {
+  var e = $("#buttCard,#buttBoleto,#buttBanco");
+  e.prop("disabled", !1), e.html("EFETUAR PAGAMENTO");
+}
+
+function valida(e) {
+  var t = !0,
+      o = document.getElementById("cardNumber"),
+      a = document.getElementById("codVerify"),
+      r = document.getElementById("dtValidMonth"),
+      n = document.getElementById("dtValidYear"),
+      l = document.getElementById("name");
+  if (!(t = validaCartao(o.value.replace(/\D/g, ""))) || "" == o.value) return sendErrorAlert("Alerta: Número do Cartão inválido"), !1;
+
+  if (t = validaCod(a), 0 == e) {
+    if (!t || "" == a.value) return sendErrorAlert("Alerta: Código Verificador inválido"), !1;
+  } else if (!t) return sendErrorAlert("Alerta: Código Verificador inválido"), !1;
+
+  if ("" == r.value || "" == n.value) return sendErrorAlert("Alerta: Selecione a validade do cartão"), !1;
+  var i = 2e3 + parseInt(n.value),
+      u = new Date(),
+      d = u.getFullYear(),
+      m = u.getMonth();
+  return d == i && m + 1 > parseInt(r.value) ? (sendErrorAlert("Alerta: Cartão fora da validade"), !1) : isString(l.value) && "" != l.value ? (loadingButton(), !0) : (sendErrorAlert("Alerta: Nome do dono do cartão inválido"), !1);
+}
+
+function getEndereco() {
+  var e = $.trim($("#cepform").val());
+  "" != (e = e.replace("-", "")) && $.getJSON("//viacep.com.br/ws/" + e + "/json/?callback=?", function (e) {
+    "erro" in e || ($("#enderecoform").val(e.logradouro), $("#bairroform").val(e.bairro), $("#cidadeform").val(e.localidade), $("#estadoform").val(e.uf), $("#complemento").val(e.complemento), $("#numform").trigger('focus'));
+  });
+}
+
+function submitAndReturn(e, t) {
+  loadingButton();
+  var o = document.getElementById("boleto-info");
+  return document.getElementById("boleto-message").innerHTML = "", o.innerHTML = '\n      <div class="text-center">\n        <p>O boleto está sendo processado e irá abrir em uma nova aba do navegador em breve.</p>\n        <p>Você pode fechar esta tela após o boleto ser processado.</p>\n      </div>\n    ', "banco" == t ? document.formbanco.submit() : document.formboleto.submit();
+}
+
+function validaEnd() {
+  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+      t = document.getElementById("cepform"),
+      o = document.getElementById("enderecoform"),
+      a = document.getElementById("numform"),
+      r = document.getElementById("bairroform"),
+      n = document.getElementById("complform"),
+      l = document.getElementById("cidadeform"),
+      u = document.getElementById("estadoform");
+
+  if (e) {
+    if ("" == t.value.trim()) return sendErrorAlert("Alerta: O Preenchimento do CEP é obrigatório."), t.focus(), resetButton(), !1;
+    var p = document.getElementsByName("zipcode");
+
+    for (i = 0; i < p.length; i++) {
+      p[i].value = t.value.trim();
+    }
+
+    if ("" == o.value.trim()) return sendErrorAlert("Alerta: O Preenchimento do Endereço é obrigatório."), o.focus(), resetButton(), !1;
+    var f = document.getElementsByName("street");
+
+    for (i = 0; i < f.length; i++) {
+      f[i].value = o.value.trim();
+    }
+
+    var g = document.getElementsByName("complement");
+
+    for (i = 0; i < g.length; i++) {
+      g[i].value = n.value.trim();
+    }
+
+    if ("" == a.value.trim()) return sendErrorAlert("Alerta: O Preenchimento do Número é obrigatório."), a.focus(), resetButton(), !1;
+    var b = document.getElementsByName("street_number");
+
+    for (i = 0; i < b.length; i++) {
+      b[i].value = a.value.trim();
+    }
+
+    if ("" == r.value.trim()) return sendErrorAlert("Alerta: O Preenchimento do Bairro é obrigatório."), r.focus(), resetButton(), !1;
+    var g = document.getElementsByName("neighborhood");
+
+    for (i = 0; i < g.length; i++) {
+      g[i].value = r.value.trim();
+    }
+
+    if ("" == l.value.trim()) return sendErrorAlert("Alerta: O Preenchimento da Cidade é obrigatório."), l.focus(), resetButton(), !1;
+    var h = document.getElementsByName("city");
+
+    for (i = 0; i < h.length; i++) {
+      h[i].value = l.value.trim();
+    }
+
+    if ("" == u.value.trim()) return sendErrorAlert("Alerta: O Preenchimento do Estado é obrigatório."), u.focus(), resetButton(), !1;
+    var y = document.getElementsByName("state");
+
+    for (i = 0; i < y.length; i++) {
+      y[i].value = u.value.trim();
+    }
+  }
+
+  return !0;
+}
+
+function validateEmail(e) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(e);
+}
+
+function preencheNome() {
+  var e = document.getElementById("nomeform"),
+      t = document.getElementsByName("nome");
+
+  for (i = 0; i < t.length; i++) {
+    t[i].value = e.value;
+  }
+}
+
+function preencheCampos() {
+  var e = document.getElementById("cepform"),
+      t = document.getElementById("enderecoform"),
+      o = document.getElementById("numform"),
+      a = document.getElementById("bairroform"),
+      r = document.getElementById("complform"),
+      n = document.getElementById("cidadeform"),
+      l = document.getElementById("estadoform");
+  var f = document.getElementsByName("zipcode");
+
+  for (i = 0; i < f.length; i++) {
+    f[i].value = e.value;
+  }
+
+  var g = document.getElementsByName("street");
+
+  for (i = 0; i < g.length; i++) {
+    g[i].value = t.value;
+  }
+
+  var b = document.getElementsByName("street_number");
+
+  for (i = 0; i < b.length; i++) {
+    b[i].value = o.value;
+  }
+
+  var h = document.getElementsByName("neighborhood");
+
+  for (i = 0; i < h.length; i++) {
+    h[i].value = a.value;
+  }
+
+  var h = document.getElementsByName("complement");
+
+  for (i = 0; i < h.length; i++) {
+    h[i].value = r.value;
+  }
+
+  var y = document.getElementsByName("city");
+
+  for (i = 0; i < y.length; i++) {
+    y[i].value = n.value;
+  }
+
+  var E = document.getElementsByName("state");
+
+  for (i = 0; i < E.length; i++) {
+    E[i].value = l.value;
+  }
+
+  return !0;
+} //Card Validation usign Luhn algorithm
+
+
+function validateCreditCardLibrepag(s) {
+  var w = s.replace(/\D/g, ""); //remove all non-digit characters
+
+  if (s.length != w.length) {
+    return false;
+  } else {
+    // validate number
+    j = w.length / 2;
+    k = Math.floor(j);
+    m = Math.ceil(j) - k;
+    c = 0;
+
+    for (i = 0; i < k; i++) {
+      a = w.charAt(i * 2 + m) * 2;
+      c += a > 9 ? Math.floor(a / 10 + a % 10) : a;
+    }
+
+    for (i = 0; i < k + m; i++) {
+      c += w.charAt(i * 2 + 1 - m) * 1;
+    }
+
+    return c % 10 == 0;
+  }
+}
+
+function validateSecurityCard(s) {
+  var w = s.replace(/\D/g, ""); //remove all non-digit characters
+
+  if (s.length != w.length) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function validaCartao(v) {
+  return validateCreditCardLibrepag(v);
+}
+
+function sendAlert(icon, message, type, url, title, plfrom, plalign, time) {
+  title = title == null ? '' : title + '<br />';
+  plfrom = plfrom == null ? 'top' : plfrom;
+  plalign = plalign == null ? 'center' : plalign;
+  time = time == null ? '2000' : time;
+  $.notify({
+    icon: icon,
+    message: message,
+    url: url,
+    title: title,
+    target: '_blank'
+  }, {
+    type: type,
+    timer: time,
+    placement: {
+      from: plfrom,
+      align: plalign
+    },
+    animate: {
+      enter: 'animated bounceInDown',
+      exit: 'animated bounceOutUp'
+    },
+    template: '<div data-notify="container" class="alert-login alert alert-{0} w-50" role="alert">' + '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' + '<span data-notify="icon"></span>' + '<span data-notify="title" class="notify-title">{1}</span>' + '<span data-notify="message">{2}</span>' + '<a href="{3}" target="{4}" data-notify="url"></a>' + '</div>'
+  });
+}
+
+function sendSuccessAlert(message) {
+  title = 'Success';
+  plfrom = 'top';
+  plalign = 'center';
+  time = '500';
+  $.notify({
+    icon: 'fa fa-check',
+    message: message,
+    target: '_blank'
+  }, {
+    type: 'success',
+    timer: time,
+    placement: {
+      from: plfrom,
+      align: plalign
+    },
+    animate: {
+      enter: 'animated bounceInDown',
+      exit: 'animated bounceOutUp'
+    },
+    template: '<div data-notify="container" class="alert-login alert alert-{0} w-50" role="alert">' + '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' + '<span data-notify="icon"></span>' + '<span data-notify="title" class="notify-title">{1}</span>' + '<span data-notify="message">{2}</span>' + '<a href="{3}" target="{4}" data-notify="url"></a>' + '</div>'
+  });
+}
+
+function sendInfoAlert(message) {
+  title = 'Info';
+  plfrom = 'top';
+  plalign = 'center';
+  time = '500';
+  $.notify({
+    icon: 'fa fa-exclamation-circle',
+    message: message,
+    target: '_blank'
+  }, {
+    type: 'info',
+    timer: time,
+    placement: {
+      from: plfrom,
+      align: plalign
+    },
+    animate: {
+      enter: 'animated bounceInDown',
+      exit: 'animated bounceOutUp'
+    },
+    template: '<div data-notify="container" class="alert-login alert alert-{0} w-50" role="alert">' + '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' + '<span data-notify="icon"></span>' + '<span data-notify="title" class="notify-title">{1}</span>' + '<span data-notify="message">{2}</span>' + '<a href="{3}" target="{4}" data-notify="url"></a>' + '</div>'
+  });
+}
+
+function sendErrorAlert(message) {
+  title = 'Error';
+  plfrom = 'top';
+  plalign = 'center';
+  time = '3000';
+  $.notify({
+    icon: 'fa fa-exclamation-circle',
+    message: message,
+    target: '_blank'
+  }, {
+    type: 'danger',
+    timer: time,
+    placement: {
+      from: plfrom,
+      align: plalign
+    },
+    animate: {
+      enter: 'animated bounceInDown',
+      exit: 'animated bounceOutUp'
+    },
+    template: '<div data-notify="container" class="alert-login alert alert-{0} w-50" role="alert">' + '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' + '<span data-notify="icon"></span>' + '<span data-notify="title" class="notify-title">{1}</span>' + '<span data-notify="message">{2}</span>' + '<a href="{3}" target="{4}" data-notify="url"></a>' + '</div>'
+  });
+}
+
+jQuery.fn.shake = function () {
+  this.each(function (i) {
+    $(this).css({
+      "position": "relative"
+    });
+
+    for (var x = 1; x <= 3; x++) {
+      $(this).animate({
+        left: -15
+      }, 10).animate({
+        left: 0
+      }, 50).animate({
+        left: 15
+      }, 10).animate({
+        left: 0
+      }, 50);
+    }
+  });
+  return this;
+};
+
+$(function () {
+  if ($("#cardNumber").length > 0) {
+    var cardCleave = new Cleave("#cardNumber", {
+      creditCard: true,
+      onCreditCardTypeChanged: function onCreditCardTypeChanged(type) {
+        $('#cc-logo').attr('class', "cc-number ".concat(type));
+      }
+    });
+  }
+
+  if ($("#cepform").length > 0) {
+    var cepCleave = new Cleave("#cepform", {
+      numericOnly: true,
+      delimiters: ["-"],
+      blocks: [5, 3]
+    });
+  }
+
+  $("#name").on("keyup", function () {
+    $(this).val($(this).val().toUpperCase());
+  });
+
+  var e = function e(_e) {
+    return 11 === _e.replace(/\D/g, "").length ? "(00) 00000-0000" : "(00) 0000-00009";
+  },
+      t = {
+    onKeyPress: function onKeyPress(t, o, a, r) {
+      a.mask(e.apply({}, arguments), r);
+    }
+  };
+
+  $("#Fone").mask(e, t);
+  $("#codVerify").on('blur', function () {
+    validaCod(this);
+  });
+  $("#cardNumber").on('blur', function () {
+    validaCard(this);
+  });
+  $("#buttCard").on('click', function () {
+    if (valida(0) && validaEnd()) {
+      preencheCampos();
+      preencheNome();
+      $('#payment-confirmation-modal').modal('show');
+      $(this).closest('form').trigger('submit');
+    }
+  });
+  $("#buttBoleto").on('click', function () {
+    if (validaEnd()) {
+      preencheCampos();
+      submitAndReturn('', 'boleto');
+    }
+  });
+  $("#cepform").on('blur', function () {
+    getEndereco(true);
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/checkout/scripts.js":
+/*!******************************************!*\
+  !*** ./resources/js/checkout/scripts.js ***!
+  \******************************************/
+/***/ (() => {
+
+var maskBehavior = function maskBehavior(val) {
+  return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+},
+    options = {
+  onKeyPress: function onKeyPress(val, e, field, options) {
+    field.mask(maskBehavior.apply({}, arguments), options);
+  }
+};
+
+var CpfCnpjMaskBehavior = function CpfCnpjMaskBehavior(val) {
+  return val.replace(/\D/g, '').length <= 11 ? '000.000.000-009' : '00.000.000/0000-00';
+},
+    cpfCnpjpOptions = {
+  onKeyPress: function onKeyPress(val, e, field, options) {
+    field.mask(CpfCnpjMaskBehavior.apply({}, arguments), options);
+  }
+};
+
+function click_removeCartItem() {
+  var $this = $(this),
+      $form = $this.closest('form');
+  $this.addClass('d-none');
+  $this.parent().next('.loading').removeClass('d-none');
+  $form.trigger('submit');
+}
+
+$.fn.button = function (action) {
+  if (action === 'loading' && this.data('loading-text')) {
+    this.data('original-text', this.html()).html(this.data('loading-text')).prop('disabled', true);
+  }
+
+  if (action === 'reset' && this.data('original-text')) {
+    this.html(this.data('original-text')).prop('disabled', false);
+  }
+};
+
+$(function () {
+  $('.cpf_cnpj').mask(CpfCnpjMaskBehavior, cpfCnpjpOptions);
+  $('.cpf').mask('000.000.000-00');
+  $('.cnpj').mask('00.000.000/0000-00');
+  $('.date').mask('00/00/0000');
+  $('.phone-mask').mask(maskBehavior, options);
+  $('.time').mask('00:00');
+  $('.zipcode').mask('00000-000');
+  $('.number').mask('0#');
+  /* $('.number-decimal').maskMoney({
+      allowZero: true,
+      allowEmpty: true,
+      prefix: '',
+      thousands: '',
+      decimal: ',',
+      precision: 2,
+      affixesStay: true
+  }); */
+
+  $('.remove-item').on('click', click_removeCartItem);
+  $('.add-coupon-button').on('click', function () {
+    if ($('#coupon').val().length > 0) {
+      $(this).button('loading');
+      $(this).closest('form').trigger('submit');
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap-notify/bootstrap-notify.js":
 /*!***********************************************************!*\
   !*** ./node_modules/bootstrap-notify/bootstrap-notify.js ***!
   \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, exports, __webpack_require__) => {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
 * Project: Bootstrap Notify = v3.1.3
@@ -7606,9 +8114,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 	if (true) {
 		// AMD. Register as an anonymous module.
 		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+		(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	} else {}
 }(function ($) {
 	// Create the defaults once
@@ -7953,8 +8461,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /*!*****************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 /*!
   * Bootstrap v4.5.3 (https://getbootstrap.com/)
@@ -7963,7 +8470,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   */
 (function (global, factory) {
    true ? factory(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")) :
-  undefined;
+  0;
 }(this, (function (exports, $, Popper) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
@@ -12381,12 +12888,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /*!***************************************************!*\
   !*** ./node_modules/cleave.js/dist/cleave-esm.js ***!
   \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(global) {var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var commonjsGlobal = typeof window !== 'undefined' ? window : typeof __webpack_require__.g !== 'undefined' ? __webpack_require__.g : typeof self !== 'undefined' ? self : {};
 
 var NumeralFormatter = function (numeralDecimalMark,
                                  numeralIntegerScale,
@@ -13943,9 +14452,8 @@ Cleave.DefaultProperties = DefaultProperties_1;
 // CommonJS
 var Cleave_1 = Cleave;
 
-/* harmony default export */ __webpack_exports__["default"] = (Cleave_1);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Cleave_1);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -13953,8 +14461,7 @@ var Cleave_1 = Cleave;
 /*!*************************************************************!*\
   !*** ./node_modules/jquery-mask-plugin/dist/jquery.mask.js ***!
   \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, exports, __webpack_require__) => {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
  * jquery.mask.js
@@ -13999,9 +14506,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
     if (true) {
         !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+		(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
     } else {}
 
 }(function ($) {
@@ -14567,8 +15074,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /*!********************************************!*\
   !*** ./node_modules/jquery/dist/jquery.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * jQuery JavaScript Library v3.6.0
@@ -25414,7 +25920,7 @@ if ( true ) {
 	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function() {
 		return jQuery;
 	}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 }
 
 
@@ -25460,10 +25966,10 @@ return jQuery;
 /*!***************************************!*\
   !*** ./node_modules/lodash/lodash.js ***!
   \***************************************/
-/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
+/* module decorator */ module = __webpack_require__.nmd(module);
+var __WEBPACK_AMD_DEFINE_RESULT__;/**
  * @license
  * Lodash <https://lodash.com/>
  * Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
@@ -25892,7 +26398,7 @@ return jQuery;
       freeParseInt = parseInt;
 
   /** Detect free variable `global` from Node.js. */
-  var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+  var freeGlobal = typeof __webpack_require__.g == 'object' && __webpack_require__.g && __webpack_require__.g.Object === Object && __webpack_require__.g;
 
   /** Detect free variable `self`. */
   var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
@@ -25904,7 +26410,7 @@ return jQuery;
   var freeExports =  true && exports && !exports.nodeType && exports;
 
   /** Detect free variable `module`. */
-  var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+  var freeModule = freeExports && "object" == 'object' && module && !module.nodeType && module;
 
   /** Detect the popular CommonJS extension `module.exports`. */
   var moduleExports = freeModule && freeModule.exports === freeExports;
@@ -42659,13 +43165,12 @@ return jQuery;
     !(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
       return _;
     }).call(exports, __webpack_require__, exports, module),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
   }
   // Check for `exports` after `define` in case a build optimizer adds it.
   else {}
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
 
 /***/ }),
 
@@ -42673,12 +43178,14 @@ return jQuery;
 /*!***************************************************!*\
   !*** ./node_modules/popper.js/dist/esm/popper.js ***!
   \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(global) {/**!
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
  * @version 1.16.1
  * @license
@@ -45288,14 +45795,13 @@ var Popper = function () {
  */
 
 
-Popper.Utils = (typeof window !== 'undefined' ? window : global).PopperUtils;
+Popper.Utils = (typeof window !== 'undefined' ? window : __webpack_require__.g).PopperUtils;
 Popper.placements = placements;
 Popper.Defaults = Defaults;
 
-/* harmony default export */ __webpack_exports__["default"] = (Popper);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Popper);
 //# sourceMappingURL=popper.js.map
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -45303,8 +45809,7 @@ Popper.Defaults = Defaults;
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
   \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ ((module) => {
 
 // shim for using process in browser
 var process = module.exports = {};
@@ -45492,140 +45997,94 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 
-/***/ }),
+/***/ })
 
-/***/ "./node_modules/webpack/buildin/global.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-
-/***/ "./node_modules/webpack/buildin/module.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/module.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function(module) {
-	if (!module.webpackPolyfill) {
-		module.deprecate = function() {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if (!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-
-/***/ }),
-
-/***/ "./resources/js/bootstrap.js":
-/*!***********************************!*\
-  !*** ./resources/js/bootstrap.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/**
- * We'll load jQuery and the Bootstrap jQuery plugin which provides support
- * for JavaScript based Bootstrap features such as modals and tabs. This
- * code may be modified to fit the specific needs of your application.
- */
-
-try {
-  window.Popper = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")["default"];
-  window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-
-  __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
-} catch (e) {}
-/**
- * We'll load the axios HTTP library which allows us to easily issue requests
- * to our Laravel back-end. This library automatically handles sending the
- * CSRF token as a header based on the value of the "XSRF" token cookie.
- */
-
-
-window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-/**
- * Next we will register the CSRF Token as a common header with Axios so that
- * all outgoing HTTP requests automatically have it attached. This is just
- * a simple convenience so we don't have to attach every token manually.
- */
-
-var token = document.head.querySelector('meta[name="csrf-token"]');
-
-if (token) {
-  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
-  /*$.ajaxSetup({
-      headers: {
-          'X-CSRF-TOKEN': token.content
-      }
-  });*/
-}
-/**
- * Echo exposes an expressive API for subscribing to channels and listening
- * for events that are broadcast by Laravel. Echo and event broadcasting
- * allows your team to easily build robust real-time web applications.
- */
-// import Echo from 'laravel-echo';
-// window.Pusher = require('pusher-js');
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: process.env.MIX_PUSHER_APP_KEY,
-//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     forceTLS: true
-// });
-
-/***/ }),
-
-/***/ "./resources/js/checkout/checkout.js":
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			loaded: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/node module decorator */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nmd = (module) => {
+/******/ 			module.paths = [];
+/******/ 			if (!module.children) module.children = [];
+/******/ 			return module;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
 /*!*******************************************!*\
   !*** ./resources/js/checkout/checkout.js ***!
   \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
 __webpack_require__(/*! ../bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! jquery-mask-plugin */ "./node_modules/jquery-mask-plugin/dist/jquery.mask.js");
@@ -45639,567 +46098,7 @@ __webpack_require__(/*! @fancyapps/fancybox */ "./node_modules/@fancyapps/fancyb
 __webpack_require__(/*! ./scripts */ "./resources/js/checkout/scripts.js");
 
 __webpack_require__(/*! ./checkout_payment */ "./resources/js/checkout/checkout_payment.js");
+})();
 
-/***/ }),
-
-/***/ "./resources/js/checkout/checkout_payment.js":
-/*!***************************************************!*\
-  !*** ./resources/js/checkout/checkout_payment.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function roundNumber(e, t) {
-  if (!t) return Math.round(e);
-
-  if (0 == e) {
-    for (var o = "", a = 0; a < t; a++) {
-      o += "0";
-    }
-
-    return "0," + o;
-  }
-
-  if (e > 0 && e < 1) {
-    var r = Math.pow(10, t);
-    return "0," + Math.round(e * r).toString().slice(-1 * t);
-  }
-
-  var n = Math.pow(10, t),
-      l = Math.round(e * n).toString();
-  return l.slice(0, -1 * t) + "," + l.slice(-1 * t);
-}
-
-function number_format(e, t, o, a) {
-  e = (e + "").replace(/[^0-9+\-Ee.]/g, "");
-  var r = isFinite(+e) ? +e : 0,
-      n = isFinite(+t) ? Math.abs(t) : 0,
-      l = void 0 === a ? "," : a,
-      i = void 0 === o ? "." : o,
-      u = "";
-  return u = (n ? function (e, t) {
-    var o = Math.pow(10, t);
-    return "" + (Math.round(e * o) / o).toFixed(t);
-  }(r, n) : "" + Math.round(r)).split("."), u[0].length > 3 && (u[0] = u[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, l)), (u[1] || "").length < n && (u[1] = u[1] || "", u[1] += new Array(n - u[1].length + 1).join("0")), u.join(i);
-}
-
-function validaCard(e) {
-  flag = !0, x = document.getElementById("cardNumberEr"), "" != e.value && (flag = validaCartao(e.value.replace(/\D/g, ""))), flag ? (x.style.display = "none", e.style.borderColor = "rgb(150, 162, 185)") : (x.style.display = "block", e.style.borderColor = "rgb(200, 0, 0)");
-}
-
-function validaCod(e) {
-  var t = e.value.replace(/\D/g, "");
-  return e.value.length != t.length ? (x = document.getElementById("codVerifyEr"), x.style.display = "block", e.style.borderColor = "rgb(200, 0, 0)", !1) : (flag = !0, "" != e.value && e.maxLength != e.value.length && (flag = !1), x = document.getElementById("codVerifyEr"), flag ? (x.style.display = "none", e.style.borderColor = "rgb(150, 162, 185)", !0) : (x.style.display = "block", e.style.borderColor = "rgb(200, 0, 0)", !1));
-}
-
-function validaNome(e) {
-  flag = !0, x = document.getElementById("nomeEr"), "" != e.value && (flag = isString(e.value)), flag ? (x.style.display = "none", e.style.borderColor = "rgb(150, 162, 185)") : (x.style.display = "block", e.style.borderColor = "rgb(200, 0, 0)");
-}
-
-function validaCPF(e) {
-  flag = !0, "" != e.value && (flag = validaDoc(e.value)), x = document.getElementById("cpfEr"), flag ? (x.style.display = "none", e.style.borderColor = "rgb(150, 162, 185)") : (x.style.display = "block", e.style.borderColor = "rgb(200, 0, 0)");
-}
-
-function validaCpf(e) {
-  var t = "";
-
-  for (i = 0; i < e.length; i++) {
-    switch (e.charAt(i)) {
-      case "0":
-      case "1":
-      case "2":
-      case "3":
-      case "4":
-      case "5":
-      case "6":
-      case "7":
-      case "8":
-      case "9":
-        t += e.charAt(i);
-    }
-  }
-
-  if (e = t, 11 != e.length || "00000000000" == e || "11111111111" == e || "22222222222" == e || "33333333333" == e || "44444444444" == e || "55555555555" == e || "66666666666" == e || "77777777777" == e || "88888888888" == e || "99999999999" == e) return !1;
-
-  for (add = 0, i = 0; i < 9; i++) {
-    add += parseInt(e.charAt(i)) * (10 - i);
-  }
-
-  if (rev = 11 - add % 11, 10 != rev && 11 != rev || (rev = 0), rev != parseInt(e.charAt(9))) return !1;
-
-  for (add = 0, i = 0; i < 10; i++) {
-    add += parseInt(e.charAt(i)) * (11 - i);
-  }
-
-  return rev = 11 - add % 11, 10 != rev && 11 != rev || (rev = 0), rev == parseInt(e.charAt(10));
-}
-
-function isString(e) {
-  return "string" == typeof e;
-}
-
-function isNumber(e) {
-  return "number" == typeof e;
-}
-
-function loadingButton() {
-  var e = $("#buttCard,#buttBoleto,#buttBanco");
-  e.prop("disabled", !0), e.html("<i class='fa fa-spinner fa-spin fa-2x fa-fw'></i>");
-}
-
-function resetButton() {
-  var e = $("#buttCard,#buttBoleto,#buttBanco");
-  e.prop("disabled", !1), e.html("EFETUAR PAGAMENTO");
-}
-
-function valida(e) {
-  var t = !0,
-      o = document.getElementById("cardNumber"),
-      a = document.getElementById("codVerify"),
-      r = document.getElementById("dtValidMonth"),
-      n = document.getElementById("dtValidYear"),
-      l = document.getElementById("name");
-  if (!(t = validaCartao(o.value.replace(/\D/g, ""))) || "" == o.value) return sendErrorAlert("Alerta: Número do Cartão inválido"), !1;
-
-  if (t = validaCod(a), 0 == e) {
-    if (!t || "" == a.value) return sendErrorAlert("Alerta: Código Verificador inválido"), !1;
-  } else if (!t) return sendErrorAlert("Alerta: Código Verificador inválido"), !1;
-
-  if ("" == r.value || "" == n.value) return sendErrorAlert("Alerta: Selecione a validade do cartão"), !1;
-  var i = 2e3 + parseInt(n.value),
-      u = new Date(),
-      d = u.getFullYear(),
-      m = u.getMonth();
-  return d == i && m + 1 > parseInt(r.value) ? (sendErrorAlert("Alerta: Cartão fora da validade"), !1) : isString(l.value) && "" != l.value ? (loadingButton(), !0) : (sendErrorAlert("Alerta: Nome do dono do cartão inválido"), !1);
-}
-
-function getEndereco() {
-  var e = $.trim($("#cepform").val());
-  "" != (e = e.replace("-", "")) && $.getJSON("//viacep.com.br/ws/" + e + "/json/?callback=?", function (e) {
-    "erro" in e || ($("#enderecoform").val(e.logradouro), $("#bairroform").val(e.bairro), $("#cidadeform").val(e.localidade), $("#estadoform").val(e.uf), $("#complemento").val(e.complemento), $("#numform").trigger('focus'));
-  });
-}
-
-function submitAndReturn(e, t) {
-  loadingButton();
-  var o = document.getElementById("boleto-info");
-  return document.getElementById("boleto-message").innerHTML = "", o.innerHTML = '\n      <div class="text-center">\n        <p>O boleto está sendo processado e irá abrir em uma nova aba do navegador em breve.</p>\n        <p>Você pode fechar esta tela após o boleto ser processado.</p>\n      </div>\n    ', "banco" == t ? document.formbanco.submit() : document.formboleto.submit();
-}
-
-function validaEnd() {
-  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-      t = document.getElementById("cepform"),
-      o = document.getElementById("enderecoform"),
-      a = document.getElementById("numform"),
-      r = document.getElementById("bairroform"),
-      n = document.getElementById("complform"),
-      l = document.getElementById("cidadeform"),
-      u = document.getElementById("estadoform");
-
-  if (e) {
-    if ("" == t.value.trim()) return sendErrorAlert("Alerta: O Preenchimento do CEP é obrigatório."), t.focus(), resetButton(), !1;
-    var p = document.getElementsByName("zipcode");
-
-    for (i = 0; i < p.length; i++) {
-      p[i].value = t.value.trim();
-    }
-
-    if ("" == o.value.trim()) return sendErrorAlert("Alerta: O Preenchimento do Endereço é obrigatório."), o.focus(), resetButton(), !1;
-    var f = document.getElementsByName("street");
-
-    for (i = 0; i < f.length; i++) {
-      f[i].value = o.value.trim();
-    }
-
-    var g = document.getElementsByName("complement");
-
-    for (i = 0; i < g.length; i++) {
-      g[i].value = n.value.trim();
-    }
-
-    if ("" == a.value.trim()) return sendErrorAlert("Alerta: O Preenchimento do Número é obrigatório."), a.focus(), resetButton(), !1;
-    var b = document.getElementsByName("street_number");
-
-    for (i = 0; i < b.length; i++) {
-      b[i].value = a.value.trim();
-    }
-
-    if ("" == r.value.trim()) return sendErrorAlert("Alerta: O Preenchimento do Bairro é obrigatório."), r.focus(), resetButton(), !1;
-    var g = document.getElementsByName("neighborhood");
-
-    for (i = 0; i < g.length; i++) {
-      g[i].value = r.value.trim();
-    }
-
-    if ("" == l.value.trim()) return sendErrorAlert("Alerta: O Preenchimento da Cidade é obrigatório."), l.focus(), resetButton(), !1;
-    var h = document.getElementsByName("city");
-
-    for (i = 0; i < h.length; i++) {
-      h[i].value = l.value.trim();
-    }
-
-    if ("" == u.value.trim()) return sendErrorAlert("Alerta: O Preenchimento do Estado é obrigatório."), u.focus(), resetButton(), !1;
-    var y = document.getElementsByName("state");
-
-    for (i = 0; i < y.length; i++) {
-      y[i].value = u.value.trim();
-    }
-  }
-
-  return !0;
-}
-
-function validateEmail(e) {
-  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(e);
-}
-
-function preencheNome() {
-  var e = document.getElementById("nomeform"),
-      t = document.getElementsByName("nome");
-
-  for (i = 0; i < t.length; i++) {
-    t[i].value = e.value;
-  }
-}
-
-function preencheCampos() {
-  var e = document.getElementById("cepform"),
-      t = document.getElementById("enderecoform"),
-      o = document.getElementById("numform"),
-      a = document.getElementById("bairroform"),
-      r = document.getElementById("complform"),
-      n = document.getElementById("cidadeform"),
-      l = document.getElementById("estadoform");
-  var f = document.getElementsByName("zipcode");
-
-  for (i = 0; i < f.length; i++) {
-    f[i].value = e.value;
-  }
-
-  var g = document.getElementsByName("street");
-
-  for (i = 0; i < g.length; i++) {
-    g[i].value = t.value;
-  }
-
-  var b = document.getElementsByName("street_number");
-
-  for (i = 0; i < b.length; i++) {
-    b[i].value = o.value;
-  }
-
-  var h = document.getElementsByName("neighborhood");
-
-  for (i = 0; i < h.length; i++) {
-    h[i].value = a.value;
-  }
-
-  var h = document.getElementsByName("complement");
-
-  for (i = 0; i < h.length; i++) {
-    h[i].value = r.value;
-  }
-
-  var y = document.getElementsByName("city");
-
-  for (i = 0; i < y.length; i++) {
-    y[i].value = n.value;
-  }
-
-  var E = document.getElementsByName("state");
-
-  for (i = 0; i < E.length; i++) {
-    E[i].value = l.value;
-  }
-
-  return !0;
-} //Card Validation usign Luhn algorithm
-
-
-function validateCreditCardLibrepag(s) {
-  var w = s.replace(/\D/g, ""); //remove all non-digit characters
-
-  if (s.length != w.length) {
-    return false;
-  } else {
-    // validate number
-    j = w.length / 2;
-    k = Math.floor(j);
-    m = Math.ceil(j) - k;
-    c = 0;
-
-    for (i = 0; i < k; i++) {
-      a = w.charAt(i * 2 + m) * 2;
-      c += a > 9 ? Math.floor(a / 10 + a % 10) : a;
-    }
-
-    for (i = 0; i < k + m; i++) {
-      c += w.charAt(i * 2 + 1 - m) * 1;
-    }
-
-    return c % 10 == 0;
-  }
-}
-
-function validateSecurityCard(s) {
-  var w = s.replace(/\D/g, ""); //remove all non-digit characters
-
-  if (s.length != w.length) {
-    return false;
-  } else {
-    return true;
-  }
-}
-
-function validaCartao(v) {
-  return validateCreditCardLibrepag(v);
-}
-
-function sendAlert(icon, message, type, url, title, plfrom, plalign, time) {
-  title = title == null ? '' : title + '<br />';
-  plfrom = plfrom == null ? 'top' : plfrom;
-  plalign = plalign == null ? 'center' : plalign;
-  time = time == null ? '2000' : time;
-  $.notify({
-    icon: icon,
-    message: message,
-    url: url,
-    title: title,
-    target: '_blank'
-  }, {
-    type: type,
-    timer: time,
-    placement: {
-      from: plfrom,
-      align: plalign
-    },
-    animate: {
-      enter: 'animated bounceInDown',
-      exit: 'animated bounceOutUp'
-    },
-    template: '<div data-notify="container" class="alert-login alert alert-{0} w-50" role="alert">' + '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' + '<span data-notify="icon"></span>' + '<span data-notify="title" class="notify-title">{1}</span>' + '<span data-notify="message">{2}</span>' + '<a href="{3}" target="{4}" data-notify="url"></a>' + '</div>'
-  });
-}
-
-function sendSuccessAlert(message) {
-  title = 'Success';
-  plfrom = 'top';
-  plalign = 'center';
-  time = '500';
-  $.notify({
-    icon: 'fa fa-check',
-    message: message,
-    target: '_blank'
-  }, {
-    type: 'success',
-    timer: time,
-    placement: {
-      from: plfrom,
-      align: plalign
-    },
-    animate: {
-      enter: 'animated bounceInDown',
-      exit: 'animated bounceOutUp'
-    },
-    template: '<div data-notify="container" class="alert-login alert alert-{0} w-50" role="alert">' + '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' + '<span data-notify="icon"></span>' + '<span data-notify="title" class="notify-title">{1}</span>' + '<span data-notify="message">{2}</span>' + '<a href="{3}" target="{4}" data-notify="url"></a>' + '</div>'
-  });
-}
-
-function sendInfoAlert(message) {
-  title = 'Info';
-  plfrom = 'top';
-  plalign = 'center';
-  time = '500';
-  $.notify({
-    icon: 'fa fa-exclamation-circle',
-    message: message,
-    target: '_blank'
-  }, {
-    type: 'info',
-    timer: time,
-    placement: {
-      from: plfrom,
-      align: plalign
-    },
-    animate: {
-      enter: 'animated bounceInDown',
-      exit: 'animated bounceOutUp'
-    },
-    template: '<div data-notify="container" class="alert-login alert alert-{0} w-50" role="alert">' + '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' + '<span data-notify="icon"></span>' + '<span data-notify="title" class="notify-title">{1}</span>' + '<span data-notify="message">{2}</span>' + '<a href="{3}" target="{4}" data-notify="url"></a>' + '</div>'
-  });
-}
-
-function sendErrorAlert(message) {
-  title = 'Error';
-  plfrom = 'top';
-  plalign = 'center';
-  time = '3000';
-  $.notify({
-    icon: 'fa fa-exclamation-circle',
-    message: message,
-    target: '_blank'
-  }, {
-    type: 'danger',
-    timer: time,
-    placement: {
-      from: plfrom,
-      align: plalign
-    },
-    animate: {
-      enter: 'animated bounceInDown',
-      exit: 'animated bounceOutUp'
-    },
-    template: '<div data-notify="container" class="alert-login alert alert-{0} w-50" role="alert">' + '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' + '<span data-notify="icon"></span>' + '<span data-notify="title" class="notify-title">{1}</span>' + '<span data-notify="message">{2}</span>' + '<a href="{3}" target="{4}" data-notify="url"></a>' + '</div>'
-  });
-}
-
-jQuery.fn.shake = function () {
-  this.each(function (i) {
-    $(this).css({
-      "position": "relative"
-    });
-
-    for (var x = 1; x <= 3; x++) {
-      $(this).animate({
-        left: -15
-      }, 10).animate({
-        left: 0
-      }, 50).animate({
-        left: 15
-      }, 10).animate({
-        left: 0
-      }, 50);
-    }
-  });
-  return this;
-};
-
-$(function () {
-  if ($("#cardNumber").length > 0) {
-    var cardCleave = new Cleave("#cardNumber", {
-      creditCard: true,
-      onCreditCardTypeChanged: function onCreditCardTypeChanged(type) {
-        $('#cc-logo').attr('class', "cc-number ".concat(type));
-      }
-    });
-  }
-
-  if ($("#cepform").length > 0) {
-    var cepCleave = new Cleave("#cepform", {
-      numericOnly: true,
-      delimiters: ["-"],
-      blocks: [5, 3]
-    });
-  }
-
-  $("#name").on("keyup", function () {
-    $(this).val($(this).val().toUpperCase());
-  });
-
-  var e = function e(_e) {
-    return 11 === _e.replace(/\D/g, "").length ? "(00) 00000-0000" : "(00) 0000-00009";
-  },
-      t = {
-    onKeyPress: function onKeyPress(t, o, a, r) {
-      a.mask(e.apply({}, arguments), r);
-    }
-  };
-
-  $("#Fone").mask(e, t);
-  $("#codVerify").on('blur', function () {
-    validaCod(this);
-  });
-  $("#cardNumber").on('blur', function () {
-    validaCard(this);
-  });
-  $("#buttCard").on('click', function () {
-    if (valida(0) && validaEnd()) {
-      preencheCampos();
-      preencheNome();
-      $('#payment-confirmation-modal').modal('show');
-      $(this).closest('form').trigger('submit');
-    }
-  });
-  $("#buttBoleto").on('click', function () {
-    if (validaEnd()) {
-      preencheCampos();
-      submitAndReturn('', 'boleto');
-    }
-  });
-  $("#cepform").on('blur', function () {
-    getEndereco(true);
-  });
-});
-
-/***/ }),
-
-/***/ "./resources/js/checkout/scripts.js":
-/*!******************************************!*\
-  !*** ./resources/js/checkout/scripts.js ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var maskBehavior = function maskBehavior(val) {
-  return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
-},
-    options = {
-  onKeyPress: function onKeyPress(val, e, field, options) {
-    field.mask(maskBehavior.apply({}, arguments), options);
-  }
-};
-
-var CpfCnpjMaskBehavior = function CpfCnpjMaskBehavior(val) {
-  return val.replace(/\D/g, '').length <= 11 ? '000.000.000-009' : '00.000.000/0000-00';
-},
-    cpfCnpjpOptions = {
-  onKeyPress: function onKeyPress(val, e, field, options) {
-    field.mask(CpfCnpjMaskBehavior.apply({}, arguments), options);
-  }
-};
-
-function click_removeCartItem() {
-  var $this = $(this),
-      $form = $this.closest('form');
-  $this.addClass('d-none');
-  $this.parent().next('.loading').removeClass('d-none');
-  $form.trigger('submit');
-}
-
-$(function () {
-  $('.cpf_cnpj').mask(CpfCnpjMaskBehavior, cpfCnpjpOptions);
-  $('.cpf').mask('000.000.000-00');
-  $('.cnpj').mask('00.000.000/0000-00');
-  $('.date').mask('00/00/0000');
-  $('.phone-mask').mask(maskBehavior, options);
-  $('.time').mask('00:00');
-  $('.zipcode').mask('00000-000');
-  $('.number').mask('0#');
-  /* $('.number-decimal').maskMoney({
-      allowZero: true,
-      allowEmpty: true,
-      prefix: '',
-      thousands: '',
-      decimal: ',',
-      precision: 2,
-      affixesStay: true
-  }); */
-
-  $('.remove-item').on('click', click_removeCartItem);
-});
-
-/***/ }),
-
-/***/ 2:
-/*!*************************************************!*\
-  !*** multi ./resources/js/checkout/checkout.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! C:\ISIG\resources\js\checkout\checkout.js */"./resources/js/checkout/checkout.js");
-
-
-/***/ })
-
-/******/ });
+/******/ })()
+;

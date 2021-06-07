@@ -1,4 +1,4 @@
-<!--<div class="container-fluid p-0">
+<div class="container-fluid p-0">
     <div id="top-bar" class="row d-none d-xs-none d-sm-none d-md-block">
         <div class="d-flex pt-3">
             <div class="col-6">
@@ -56,4 +56,4 @@
                 </div>
             </div>
         </div>
-    </div>-->
+    </div>

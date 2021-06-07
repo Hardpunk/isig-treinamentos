@@ -41,14 +41,14 @@
         $('.number-infinite').mask('0#');
         $('.number-percent').mask('00.00', { reverse: true });
 
-        /* $('.money').maskMoney({
+        $('.money').maskMoney({
             allowZero: true,
             allowEmpty: true,
             prefix: '',
             thousands: '.',
             decimal: ',',
             affixesStay: true
-        }); */
+        });
 
         $('#slug').stringToSlug({
             setEvents: 'blur',

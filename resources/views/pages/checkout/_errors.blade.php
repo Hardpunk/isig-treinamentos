@@ -1,7 +1,7 @@
 @if (Session::has('flash_message'))
 <div class="col-md-12">
     <div class="alert alert-{{ Session::get('flash_type') }} alert-dismissible fade show" role="alert">
-        <p class="mb-0"><strong>ERRO!</strong> {!! Session::get('flash_message') !!}</p>
+        <p class="mb-0"><strong>{{ Session::get('flash_type') == 'danger' ? "ERRO!" : "SUCESSO!" }}</strong> {!! Session::get('flash_message') !!}</p>
         @if (Session::has('flash_message_detail'))
         <p class="mb-0">{{ Session::get('flash_message_detail') }}</p>
         @endif

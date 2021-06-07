@@ -127,6 +127,8 @@ return [
 
     'iped_token' => env('IPED_TOKEN'),
 
+    'iped_group' => env('IPED_GROUP'),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

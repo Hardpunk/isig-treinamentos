@@ -29,6 +29,13 @@
 </li>
 
 <li class="{{ Request::is('painel/payments*') ? 'active' : '' }}">
-    <a href="{{ route('admin.payments.index') }}"><i class="fa fa-file-invoice-dollar fa-lg"></i><span>Vendas</span></a>
+    <a href="{{ route('admin.payments.index') }}"><i class="fas fa-file-invoice-dollar fa-lg"></i><span>Vendas</span></a>
+</li>
+
+<li class="{{ Request::is('painel/coupons*') ? 'active' : '' }}">
+    <a href="{{ route('admin.coupons.index') }}"><i class="fas fa-ticket-alt fa-lg"></i><span>Cupons</span></a>
+</li>
+<li class="{{ Request::is('painel/plans*') ? 'active' : '' }}">
+    <a href="{{ route('admin.plans.index') }}"><i class="fas fa-file-contract fa-lg"></i><span>Planos</span></a>
 </li>
 
