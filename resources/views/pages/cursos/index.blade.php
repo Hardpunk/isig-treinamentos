@@ -18,7 +18,7 @@
             <div id="customize-categorias" class="row py-3">
                 @if(count($categorias) > 0)
                     @foreach($categorias as $categoria)
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 category-item">
+                        <div class="col-12 col-sm-6 col-md-4 category-item">
                             <div class="card">
                                 <a class="url-curso" href="{{ route('courses.category', $categoria->slug) }}"
                                     title="{{ $categoria->title }}">

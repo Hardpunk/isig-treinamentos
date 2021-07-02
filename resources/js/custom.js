@@ -36,7 +36,7 @@ $(function() {
 
     $('#customize-categorias').easyPaginate({
         paginateElement: '.category-item',
-        elementsPerPage: 8,
+        elementsPerPage: 12,
     });
 
     $('.placeholder').on('click', function() {

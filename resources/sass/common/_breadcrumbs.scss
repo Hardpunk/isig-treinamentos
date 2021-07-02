@@ -1,5 +1,8 @@
 #breadcrumb {
     background-color: $acim-text-color !important;
+    &.bg-alternative {
+        background-color: $acim-color-alternative !important;
+    }
     .breadcrumb__wrapper {
         h2 {
             @include font-size(46px);

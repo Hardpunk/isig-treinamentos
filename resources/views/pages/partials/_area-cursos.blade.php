@@ -11,9 +11,7 @@
         @if(count($destaques) > 0)
             <div class="row col-equal">
 
-            @php $count = 0; @endphp
             @foreach($destaques as $categoria)
-            @php if($count == 12) break; @endphp
                 <div class="col-md-4 p-4 col-sm-12">
                     <div class="card category-item item shadow-none">
                         <a class="url-curso" href="{{ route('courses.category', $categoria->slug) }}"
@@ -31,7 +29,6 @@
                         </a>
                     </div>
                 </div>
-            @php $count++; @endphp
             @endforeach
 
                 <div class="col-12 d-flex justify-content-center btn-verm">

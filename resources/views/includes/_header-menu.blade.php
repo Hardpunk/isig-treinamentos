@@ -20,12 +20,12 @@ if ($cookie !== null && count($cookie) > 0) {
 <div class="container-fluid">
     <div class="menu d-none d-md-block">
         <div class="row d-flex align-items-center px-lg-3 py-3">
-            <div class="col-md-2 col-lg-2 text-center text-lg-left">
+            <div class="col-md-5 col-xl-2 text-center text-xl-left">
                 <a class="navbar-brand" href="/">
                     <img src="{{ asset('images/logo.png') }}" alt="INAGRO" class="logo img-fluid" />
                 </a>
             </div>
-            <div class="col-md-4 col-lg-4">
+            <div class="col-md-7 col-xl-4">
                 <div class="search-wrapper mb-0 d-flex justify-content-center">
                     <form action="{{ route('search') }}" method="GET" role="search" class="form-search-box">
                         <input autocomplete="off" type="text" class="form-control search-input" name="q" />
@@ -40,8 +40,8 @@ if ($cookie !== null && count($cookie) > 0) {
                     </form>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-6">
-                <ul class="navbar-nav float-right flex-row align-items-center mb-1">
+            <div class="col-md-12 col-xl-6">
+                <ul class="navbar-nav float-right flex-row align-items-center mb-xl-1">
                     <li class="nav-item {{ Request::is('/*') ? 'active' : '' }}">
                         <a href="/" class="nav-link">Início</a>
                     </li>
@@ -126,6 +126,7 @@ if ($cookie !== null && count($cookie) > 0) {
                             </div>
                         </div>
                     </li>
+
                     <li class="nav-item">
                         @if (Auth::user())
                             <a href="{{ route('user.logout') }}" class="nav-link"

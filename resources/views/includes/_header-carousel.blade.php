@@ -12,15 +12,21 @@
                             é o primeiro passo...
                         </p>
                     </div>
-                    <div class="col-sm-6 col-lg-6 d-flex">
-                        <a href="/para-empresas#contato-empresas"
-                            class="btn btn-md btn-read-more font-weight-bold waves-effect waves-light m-0 btn-banner-1">
-                            Capacite a sua equipe
-                        </a>
-                        <a href="/#planos"
-                            class="btn btn-md btn-read-more font-weight-bold waves-effect waves-light m-0 btn-banner-2 mx-lg-5 mx-3">
-                            Planos de aprendizagem
-                        </a>
+                    <div class="col-sm-9 col-md-7 col-lg-6 col-xl-4">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <a href="/para-empresas#contato-empresas"
+                                    class="btn btn-block btn-md btn-read-more font-weight-bold waves-effect waves-light m-0 btn-banner-1">
+                                    Capacite a sua equipe
+                                </a>
+                            </div>
+                            <div class="col-sm-6 mt-3 mt-sm-0">
+                                <a href="/#planos"
+                                    class="btn btn-block btn-md btn-read-more font-weight-bold waves-effect waves-light m-0 btn-banner-2">
+                                    Planos de aprendizagem
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -16,15 +16,17 @@ class PageController extends Controller
      */
     public function home(Request $request)
     {
-        $arrayCursos = [47, 28, 14, 44, 4, 24, 18, 36, 13, 25, 38, 23];
-        $cursos_destaque = Category::whereIn('category_id', $arrayCursos)->get();
+        $arrayCategorias = [28, 44, 4, 24, 23, 47, 18, 14, 38, 13, 25, 36];
+        $idsCategorias = implode(',', $arrayCategorias);
+        $categoriasDestaque = Category::whereIn('category_id', $arrayCategorias)
+            ->orderByRaw("FIELD(category_id, {$idsCategorias})")->get();
         $categorias = Category::all();
         $trilhas = Trail::with('courses')->get();
         $planos = Plan::all();
 
         return view('index', [
             'categorias' => $categorias,
-            'destaques' => $cursos_destaque,
+            'destaques' => $categoriasDestaque,
             'trilhas' => $trilhas,
             'planos' => $planos
         ]);

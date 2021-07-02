@@ -12,6 +12,10 @@
                         class="title-curso active">{{ strpos(mb_strtolower($curso->title), 'curso de') === 0 ? str_replace('CURSO DE', '', mb_strtoupper($curso->title)) : mb_strtoupper($curso->title) }}</span>
                 </h6>
             </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-alternative mt-3 pb-4">
+        <div class="row">
             <div class="col-12">
                 <h2 class="title-curso text-center mb-0">
                     {{ strpos(mb_strtolower($curso->title), 'curso de') === 0 ? str_replace('CURSO DE', '', mb_strtoupper($curso->title)) : mb_strtoupper($curso->title) }}
@@ -30,7 +34,7 @@
                     <div class="card card-floating__content">
                         <div class="discount">
                             <span
-                                class="percentage">{{ number_format(($curso->price / $curso->old_price) * 100, 0) }}%</span>
+                                class="percentage">{{ number_format(100 - (($curso->price / $curso->old_price) * 100), 0) }}%</span>
                         </div>
                         <div class="course-details__wrapper pt-3 text-center">
                             <p class="category-title m-0">{{ $categoria->title }}</p>
