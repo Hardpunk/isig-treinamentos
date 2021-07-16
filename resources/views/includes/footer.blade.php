@@ -5,7 +5,7 @@
                 <div class="col-md-4">
                     <div class="subscribe-text mb-15">
                         <h4>Newsletter</h4>
-                        <p>Receber novidades sobre empreendedorismo e negócios em seu e-mail</p>
+                        <p>Quer receber novidades e promoções sobre cursos? Cadastre-se na nossa newsletter.</p>
                     </div>
                 </div>
                 <div class="col-md-8">
@@ -44,7 +44,7 @@
                     <i aria-hidden="true" class="fas fa-phone-volume"></i>
                 </div>
                 <div>
-                    <p>Distrito Federal: (44) 9999-9999</p>
+                    <p>Distrito Federal: (61) 99884-2889</p>
                 </div>
             </div>
             <div class="d-flex my-3">
@@ -58,7 +58,7 @@
         </div>
 
         <div class="col-md-3">
-            <div class="d-flex my-3 mx-2">
+            <div class="d-flex my-3">
                 <div class="icon-box-icon">
                     <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
                 </div>

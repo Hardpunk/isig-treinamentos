@@ -30,6 +30,11 @@ Route::prefix('painel')->name('admin.')->group(function () {
             Route::resource('payments', 'PaymentController')->only(['index', 'show']);
             Route::resource('coupons', 'CouponController');
             Route::resource('plans', 'PlanController')->except(['create', 'store','show', 'destroy']);
+            Route::resource('newsletters', 'NewsletterController');
+            Route::prefix('contacts')->group(function() {
+                Route::get('/', 'ContactController@index')->name('contacts.index');
+                Route::get('/business', 'BusinessContactController@index')->name('contactsBusiness.index');
+            });
         });
     });
 });

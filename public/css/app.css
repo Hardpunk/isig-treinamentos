@@ -20886,7 +20886,7 @@ header .navbar-brand img {
 }
 
 #footer p {
-  line-height: 1.25;
+  line-height: 1.15;
 }
 
 #footer .botaoFooter {
@@ -25484,6 +25484,10 @@ article#termos-uso__wrapper p {
   list-style: none;
   color: #666666;
   font-size: 16px;
+}
+
+span.badge.badge-theme-color {
+  background-color: #f02c6e;
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {

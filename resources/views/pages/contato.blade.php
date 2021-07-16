@@ -43,7 +43,7 @@
 					<i aria-hidden="true" class="fas fa-phone-volume"></i>
 				</div>
 				<div>
-					<p>Distrito Federal: (44) 9999-9999</p>
+					<p>Distrito Federal: (61) 99884-2889</p>
 				</div>
 			</div><div class="d-flex my-3 py-3">
 			<div class="icon-box-icon">
