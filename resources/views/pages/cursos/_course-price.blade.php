@@ -2,9 +2,9 @@
     <div class="container">
         <div class="course-price__wrapper--inner">
             <div class="course-price__content">
-                <div class="discount">
-                    <span class="percentage">{{ number_format(100 - (($curso->price / $curso->old_price) * 100), 0) }}%</span>
-                </div>
+                {{--<div class="discount">
+                    <span class="percentage">{{ number_format(($curso->price / $curso->old_price) * 100, 0) }}%</span>
+                </div>--}}
                 <div class="price__wrapper pt-3 mb-4">
                     <div class="price__wrapper--content">
                         <p class="price mb-0">

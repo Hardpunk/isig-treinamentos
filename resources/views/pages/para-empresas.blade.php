@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 <style>
-p {
+#paraempresas p {
     font-size: 1.3em;
 }
 </style>
@@ -9,7 +9,7 @@ p {
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-12 text-center py-5">
-                <h2><strong>Universidade corporativa</strong></h2>
+                <h2><strong>Universidade Corporativa</strong></h2>
             </div>
             <div class="col-md-6 text-right py-5">
                 <img class="svg-img" src="/images/sua-empresa/sua-empresa-1.png">
@@ -75,7 +75,7 @@ p {
                     <h5>DIMINUIÇÃO DA ROTATIVIDADE</h5>
                     retenção de talentos.
                 </div>
-                
+
                 <div class="col-md-4 text-center">
                     <div class="icone p-2">
                         <span class="lnr lnr-users"></span>
@@ -113,11 +113,13 @@ p {
     <section id="contato-empresas">
         <div class="container py-5">
             <div class="row align-items-center">
+                <div class="col-md-12 text-center">
+                    <h2>Saiba mais sobre os planos corporativos</h2>
+                    <p>Preencha os campos abaixo para nossa equipe entrar em contato com você.</p>
+                </div>
                 <div class="col-md-8 text-center">
                     <img class="svg-img" src="/images/sua-empresa/sua-empresa-3.png">
                     <div class="w-100 py-3"></div>
-                    <h2>Saiba mais sobre os planos corporativos</h2>
-                    <p>Preencha os campos abaixo para nossa equipe entrar em contato com você.</p>
                 </div>
                 <div class="col-md-4">
                     <form action="#" class="form-contact" method="post" tabindex="1">

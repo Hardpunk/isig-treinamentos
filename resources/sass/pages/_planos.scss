@@ -7,7 +7,7 @@
 	margin: auto 0;
 }
 .mycard {
-	text-align: center; 
+	text-align: center;
 	position: relative;
 	border-radius: 15px;
 	padding: 40px 20px;
@@ -116,6 +116,9 @@
 			font-size: 16px;
 		}
 	}
+}
+span.badge.badge-theme-color {
+    background-color: $acim-text-color;
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
 	.grid {

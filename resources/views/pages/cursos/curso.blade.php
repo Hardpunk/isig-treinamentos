@@ -32,10 +32,10 @@
             <div id="course-card-floating" class="d-none d-md-block">
                 <div class="card-floating__inner">
                     <div class="card card-floating__content">
-                        <div class="discount">
+                        {{--<div class="discount">
                             <span
-                                class="percentage">{{ number_format(100 - (($curso->price / $curso->old_price) * 100), 0) }}%</span>
-                        </div>
+                                class="percentage">{{ number_format(($curso->price / $curso->old_price) * 100, 0) }}%</span>
+                        </div>--}}
                         <div class="course-details__wrapper pt-3 text-center">
                             <p class="category-title m-0">{{ $categoria->title }}</p>
                             <p class="course-title m-0">
