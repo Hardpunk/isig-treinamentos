@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use App\Models\BusinessContact;
+use App\BusinessContact;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 
@@ -42,13 +42,21 @@ class BusinessContactDataTable extends DataTable
         return $this->builder()
             ->columns($this->getColumns())
             ->minifiedAjax()
-            ->addAction(['width' => '120px', 'printable' => false])
+            ->addAction([
+                'width' => '80px',
+                'title' => 'Ações',
+                'className' => 'text-center',
+                'printable' => false,
+            ])
             ->parameters([
+                'language' => [
+                    'url' => '//cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json',
+                ],
                 'dom'       => 'Bfrtip',
                 'stateSave' => true,
                 'order'     => [[0, 'desc']],
                 'buttons'   => [
-                    ['extend' => 'create', 'className' => 'btn btn-default btn-sm no-corner',],
+                    //['extend' => 'create', 'className' => 'btn btn-default btn-sm no-corner',],
                     ['extend' => 'export', 'className' => 'btn btn-default btn-sm no-corner',],
                     ['extend' => 'print', 'className' => 'btn btn-default btn-sm no-corner',],
                     ['extend' => 'reset', 'className' => 'btn btn-default btn-sm no-corner',],
@@ -65,7 +73,44 @@ class BusinessContactDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            
+            'id' => [
+                'title' => '#ID',
+                'searchable' => false,
+                'width' => '60px',
+                'className' => 'text-center'
+            ],
+            'name' => [
+                'data' => 'name',
+                'title' => 'Nome',
+                'searchable' => true,
+                'orderable' => true,
+            ],
+            'email' => [
+                'data' => 'email',
+                'title' => 'E-mail',
+                'searchable' => true,
+                'orderable' => true,
+            ],
+            'role' => [
+                'data' => 'role',
+                'title' => 'Cargo',
+                'searchable' => false,
+                'orderable' => true,
+            ],
+            'phone' => [
+                'data' => 'phone',
+                'title' => 'Telefone',
+                'searchable' => false,
+                'orderable' => false,
+            ],
+            'created_at' => [
+                'data' => 'created_at',
+                'title' => 'Data registro',
+                'width' => '150px',
+                'searchable' => false,
+                'orderable' => true,
+                'className' => 'text-center',
+            ],
         ];
     }
 

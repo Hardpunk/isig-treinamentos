@@ -1,15 +1,10 @@
-{!! Form::open(['route' => ['newsletters.destroy', $id], 'method' => 'delete']) !!}
+{!! Form::open(['route' => ['admin.newsletters.destroy', $id], 'method' => 'delete']) !!}
 <div class='btn-group'>
-    <a href="{{ route('newsletters.show', $id) }}" class='btn btn-default btn-xs'>
-        <i class="glyphicon glyphicon-eye-open"></i>
-    </a>
-    <a href="{{ route('newsletters.edit', $id) }}" class='btn btn-default btn-xs'>
-        <i class="glyphicon glyphicon-edit"></i>
-    </a>
-    {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', [
+    {!! Form::button('<i class="fas fa-trash"></i>', [
         'type' => 'submit',
-        'class' => 'btn btn-danger btn-xs',
-        'onclick' => "return confirm('Are you sure?')"
+        'class' => 'btn btn-danger btn-sm',
+        'title' => 'Excluir',
+        'onclick' => "return confirm('Deseja mesmo excluir?')"
     ]) !!}
 </div>
 {!! Form::close() !!}

@@ -1,12 +1,26 @@
-<!-- Created At Field -->
 <div class="form-group">
-    {!! Form::label('created_at', 'Created At:') !!}
-    <p>{{ $contact->created_at }}</p>
+    {!! Form::label('name', 'Nome:') !!}
+    <p>{{ $contact->name }}</p>
 </div>
 
-<!-- Updated At Field -->
 <div class="form-group">
-    {!! Form::label('updated_at', 'Updated At:') !!}
-    <p>{{ $contact->updated_at }}</p>
+    {!! Form::label('email', 'E-mail:') !!}
+    <p>{{ $contact->email }}</p>
 </div>
+
+<div class="form-group">
+    {!! Form::label('phone', 'Telefone:') !!}
+    <p>{{ $contact->phone }}</p>
+</div>
+
+<div class="form-group">
+    {!! Form::label('message', 'Mensagem:') !!}
+    <p>{{ $contact->message }}</p>
+</div>
+
+<div class="form-group">
+    {!! Form::label('created_at', 'Mensagem enviada em:') !!}
+    <p>{{ $contact->created_at->format('d/m/Y H:i:s') }}</p>
+</div>
+
 

@@ -26,15 +26,12 @@ Route::prefix('painel')->name('admin.')->group(function () {
                 Route::get('/registered', 'UserController@registered')->name('users.registered');
                 Route::get('/unregistered', 'UserController@unregistered')->name('users.unregistered');
             });
-            Route::resource('affiliates', 'AffiliateController')->except(['show']);
             Route::resource('payments', 'PaymentController')->only(['index', 'show']);
             Route::resource('coupons', 'CouponController');
             Route::resource('plans', 'PlanController')->except(['create', 'store','show', 'destroy']);
-            Route::resource('newsletters', 'NewsletterController');
-            Route::prefix('contacts')->group(function() {
-                Route::get('/', 'ContactController@index')->name('contacts.index');
-                Route::get('/business', 'BusinessContactController@index')->name('contactsBusiness.index');
-            });
+            Route::resource('newsletters', 'NewsletterController')->only(['index', 'destroy']);
+            Route::resource('contacts', 'ContactController')->only(['index', 'show', 'destroy']);
+            Route::resource('contactsBusiness', 'BusinessContactController')->only(['index', 'show', 'destroy']);
         });
     });
 });
@@ -101,7 +98,6 @@ Route::group(['prefix' => '/cart'], function () {
     Route::post('/add', 'CartController@add')->name('cart.add');
 });
 
-// Route::post('/pagarme/callback', 'PostbackController@callback')->name('pagarme.callback');
 Route::get('/pagarme/callback', 'PostbackController@callback')->name('pagarme.callback');
 
 Route::group(['prefix' => '/ajax'], function () {
@@ -109,6 +105,9 @@ Route::group(['prefix' => '/ajax'], function () {
         Route::post('/remove/{type}/{id}', 'CartController@remove')->name('ajax.cart.remove');
         Route::post('/add', 'CartController@add')->name('ajax.cart.add');
     });
+    Route::post('/newsletter', 'Admin\NewsletterController@store')->name('ajax.newsletter.store');
+    Route::post('/contact', 'Admin\ContactController@store')->name('ajax.newsletter.store');
+    Route::post('/business', 'Admin\BusinessContactController@store')->name('ajax.newsletter.store');
 });
 
 Route::group(['prefix' => '/cron'], function () {

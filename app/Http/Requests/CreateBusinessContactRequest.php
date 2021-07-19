@@ -2,8 +2,11 @@
 
 namespace App\Http\Requests;
 
+use App\BusinessContact;
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
-use App\Models\BusinessContact;
+use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Http\JsonResponse;
 
 class CreateBusinessContactRequest extends FormRequest
 {
@@ -26,5 +29,22 @@ class CreateBusinessContactRequest extends FormRequest
     public function rules()
     {
         return BusinessContact::$rules;
+    }
+
+    /**
+     * Handle a failed validation attempt.
+     *
+     * @param  \Illuminate\Contracts\Validation\Validator $validator
+     * @return void
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    protected function failedValidation(Validator $validator)
+    {
+        $errors = $validator->errors();
+
+        throw new HttpResponseException(
+            response()->json(['message' => $errors->first()], JsonResponse::HTTP_UNPROCESSABLE_ENTITY)
+        );
     }
 }

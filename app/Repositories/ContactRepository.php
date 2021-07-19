@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Models\Contact;
+use App\Contact;
 use App\Repositories\BaseRepository;
 
 /**
@@ -17,7 +17,7 @@ class ContactRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        
+
     ];
 
     /**

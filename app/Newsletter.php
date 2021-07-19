@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
+use DateTimeInterface;
 use Eloquent as Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class Newsletter
@@ -13,17 +13,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class Newsletter extends Model
 {
-    use SoftDeletes;
-
     public $table = 'newsletters';
-    
-
-    protected $dates = ['deleted_at'];
-
-
 
     public $fillable = [
-        
+        'email',
     ];
 
     /**
@@ -32,7 +25,7 @@ class Newsletter extends Model
      * @var array
      */
     protected $casts = [
-        
+        'email' => 'string',
     ];
 
     /**
@@ -41,8 +34,18 @@ class Newsletter extends Model
      * @var array
      */
     public static $rules = [
-        
+        'email' => 'required|email',
     ];
 
-    
+    /**
+     * Prepare a date for array / JSON serialization.
+     *
+     * @param  \DateTimeInterface  $date
+     * @return string
+     */
+    protected function serializeDate(DateTimeInterface $date)
+    {
+        return $date->format('d/m/Y H:i:s');
+    }
+
 }

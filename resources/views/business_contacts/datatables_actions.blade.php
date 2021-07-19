@@ -1,15 +1,13 @@
-{!! Form::open(['route' => ['businessContacts.destroy', $id], 'method' => 'delete']) !!}
+{!! Form::open(['route' => ['admin.contactsBusiness.destroy', $id], 'method' => 'delete']) !!}
 <div class='btn-group'>
-    <a href="{{ route('businessContacts.show', $id) }}" class='btn btn-default btn-xs'>
-        <i class="glyphicon glyphicon-eye-open"></i>
+    <a href="{{ route('admin.contactsBusiness.show', $id) }}" title="Visualizar" class='btn btn-default btn-sm'>
+        <i class="fas fa-eye"></i>
     </a>
-    <a href="{{ route('businessContacts.edit', $id) }}" class='btn btn-default btn-xs'>
-        <i class="glyphicon glyphicon-edit"></i>
-    </a>
-    {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', [
+    {!! Form::button('<i class="fas fa-trash"></i>', [
         'type' => 'submit',
-        'class' => 'btn btn-danger btn-xs',
-        'onclick' => "return confirm('Are you sure?')"
+        'class' => 'btn btn-danger btn-sm',
+        'title' => 'Excluir',
+        'onclick' => "return confirm('Deseja mesmo excluir?')"
     ]) !!}
 </div>
 {!! Form::close() !!}

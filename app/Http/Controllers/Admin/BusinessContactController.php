@@ -3,12 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\DataTables\BusinessContactDataTable;
-use App\Http\Requests;
-use App\Http\Requests\CreateBusinessContactRequest;
-use App\Http\Requests\UpdateBusinessContactRequest;
-use App\Repositories\BusinessContactRepository;
-use Flash;
 use App\Http\Controllers\AppBaseController;
+use App\Http\Requests\CreateBusinessContactRequest;
+use App\Repositories\BusinessContactRepository;
+use Auth;
+use Flash;
 use Response;
 
 class BusinessContactController extends AppBaseController
@@ -29,17 +28,8 @@ class BusinessContactController extends AppBaseController
      */
     public function index(BusinessContactDataTable $businessContactDataTable)
     {
-        return $businessContactDataTable->render('business_contacts.index');
-    }
-
-    /**
-     * Show the form for creating a new BusinessContact.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        return view('business_contacts.create');
+        $user = Auth::user();
+        return $businessContactDataTable->render('business_contacts.index', compact('user'));
     }
 
     /**
@@ -55,9 +45,12 @@ class BusinessContactController extends AppBaseController
 
         $businessContact = $this->businessContactRepository->create($input);
 
-        Flash::success('Business Contact saved successfully.');
+        if ($request->ajax()) {
+            return response()->json(['status' => true, 'message' => 'Contato enviado com sucesso.']);
+        }
 
-        return redirect(route('businessContacts.index'));
+        Flash::success('Contato salvo com sucesso.');
+        return redirect(route('admin.contactsBusiness.index'));
     }
 
     /**
@@ -69,60 +62,16 @@ class BusinessContactController extends AppBaseController
      */
     public function show($id)
     {
+        $user = Auth::user();
         $businessContact = $this->businessContactRepository->find($id);
 
         if (empty($businessContact)) {
-            Flash::error('Business Contact not found');
+            Flash::error('Contato não encontrado.');
 
-            return redirect(route('businessContacts.index'));
+            return redirect(route('admin.contactsBusiness.index'));
         }
 
-        return view('business_contacts.show')->with('businessContact', $businessContact);
-    }
-
-    /**
-     * Show the form for editing the specified BusinessContact.
-     *
-     * @param  int $id
-     *
-     * @return Response
-     */
-    public function edit($id)
-    {
-        $businessContact = $this->businessContactRepository->find($id);
-
-        if (empty($businessContact)) {
-            Flash::error('Business Contact not found');
-
-            return redirect(route('businessContacts.index'));
-        }
-
-        return view('business_contacts.edit')->with('businessContact', $businessContact);
-    }
-
-    /**
-     * Update the specified BusinessContact in storage.
-     *
-     * @param  int              $id
-     * @param UpdateBusinessContactRequest $request
-     *
-     * @return Response
-     */
-    public function update($id, UpdateBusinessContactRequest $request)
-    {
-        $businessContact = $this->businessContactRepository->find($id);
-
-        if (empty($businessContact)) {
-            Flash::error('Business Contact not found');
-
-            return redirect(route('businessContacts.index'));
-        }
-
-        $businessContact = $this->businessContactRepository->update($request->all(), $id);
-
-        Flash::success('Business Contact updated successfully.');
-
-        return redirect(route('businessContacts.index'));
+        return view('business_contacts.show', compact('businessContact', 'user'));
     }
 
     /**
@@ -137,15 +86,15 @@ class BusinessContactController extends AppBaseController
         $businessContact = $this->businessContactRepository->find($id);
 
         if (empty($businessContact)) {
-            Flash::error('Business Contact not found');
+            Flash::error('Contato não encontrado');
 
-            return redirect(route('businessContacts.index'));
+            return redirect(route('admin.contactsBusiness.index'));
         }
 
         $this->businessContactRepository->delete($id);
 
-        Flash::success('Business Contact deleted successfully.');
+        Flash::success('Contato excluído com sucesso.');
 
-        return redirect(route('businessContacts.index'));
+        return redirect(route('admin.contactsBusiness.index'));
     }
 }

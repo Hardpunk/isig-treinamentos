@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\DataTables\ContactDataTable;
-use App\Http\Requests;
+use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\CreateContactRequest;
 use App\Http\Requests\UpdateContactRequest;
 use App\Repositories\ContactRepository;
+use Auth;
 use Flash;
-use App\Http\Controllers\AppBaseController;
 use Response;
 
 class ContactController extends AppBaseController
@@ -29,17 +29,8 @@ class ContactController extends AppBaseController
      */
     public function index(ContactDataTable $contactDataTable)
     {
-        return $contactDataTable->render('contacts.index');
-    }
-
-    /**
-     * Show the form for creating a new Contact.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        return view('contacts.create');
+        $user = Auth::user();
+        return $contactDataTable->render('contacts.index', compact('user'));
     }
 
     /**
@@ -51,13 +42,16 @@ class ContactController extends AppBaseController
      */
     public function store(CreateContactRequest $request)
     {
-        $input = $request->all();
+        $input = $request->except('g-recaptcha-response');
 
         $contact = $this->contactRepository->create($input);
 
-        Flash::success('Contact saved successfully.');
+        if ($request->ajax()) {
+            return response()->json(['status' => true, 'message' => 'Contato enviado com sucesso.']);
+        }
 
-        return redirect(route('contacts.index'));
+        Flash::success('Contato salvo com sucesso.');
+        return redirect(route('admin.contacts.index'));
     }
 
     /**
@@ -69,60 +63,16 @@ class ContactController extends AppBaseController
      */
     public function show($id)
     {
+        $user = Auth::user();
         $contact = $this->contactRepository->find($id);
 
         if (empty($contact)) {
-            Flash::error('Contact not found');
+            Flash::error('Contato não encontrado.');
 
-            return redirect(route('contacts.index'));
+            return redirect(route('admin.contacts.index'));
         }
 
-        return view('contacts.show')->with('contact', $contact);
-    }
-
-    /**
-     * Show the form for editing the specified Contact.
-     *
-     * @param  int $id
-     *
-     * @return Response
-     */
-    public function edit($id)
-    {
-        $contact = $this->contactRepository->find($id);
-
-        if (empty($contact)) {
-            Flash::error('Contact not found');
-
-            return redirect(route('contacts.index'));
-        }
-
-        return view('contacts.edit')->with('contact', $contact);
-    }
-
-    /**
-     * Update the specified Contact in storage.
-     *
-     * @param  int              $id
-     * @param UpdateContactRequest $request
-     *
-     * @return Response
-     */
-    public function update($id, UpdateContactRequest $request)
-    {
-        $contact = $this->contactRepository->find($id);
-
-        if (empty($contact)) {
-            Flash::error('Contact not found');
-
-            return redirect(route('contacts.index'));
-        }
-
-        $contact = $this->contactRepository->update($request->all(), $id);
-
-        Flash::success('Contact updated successfully.');
-
-        return redirect(route('contacts.index'));
+        return view('contacts.show', compact('contact', 'user'));
     }
 
     /**
@@ -137,15 +87,15 @@ class ContactController extends AppBaseController
         $contact = $this->contactRepository->find($id);
 
         if (empty($contact)) {
-            Flash::error('Contact not found');
+            Flash::error('Contato não encontrado');
 
-            return redirect(route('contacts.index'));
+            return redirect(route('admin.contacts.index'));
         }
 
         $this->contactRepository->delete($id);
 
-        Flash::success('Contact deleted successfully.');
+        Flash::success('Contato excluído com sucesso.');
 
-        return redirect(route('contacts.index'));
+        return redirect(route('admin.contacts.index'));
     }
 }

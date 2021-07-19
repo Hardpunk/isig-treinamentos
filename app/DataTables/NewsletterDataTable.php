@@ -2,9 +2,9 @@
 
 namespace App\DataTables;
 
-use App\Models\Newsletter;
-use Yajra\DataTables\Services\DataTable;
+use App\Newsletter;
 use Yajra\DataTables\EloquentDataTable;
+use Yajra\DataTables\Services\DataTable;
 
 class NewsletterDataTable extends DataTable
 {
@@ -46,18 +46,21 @@ class NewsletterDataTable extends DataTable
                 'width' => '80px',
                 'title' => 'Ações',
                 'className' => 'text-center',
-                'printable' => false
+                'printable' => false,
             ])
             ->parameters([
-                 'language' => [
-                     'url' => '//cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json',
-                 ],
-                'dom'       => 'Bfrtip',
+                'language' => [
+                    'url' => '//cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json',
+                ],
+                'dom' => 'Bfrtip',
                 'stateSave' => true,
-                'order'     => [[0, 'desc']],
-                'buttons'   => [
+                'order' => [[0, 'desc']],
+                'buttons' => [
+                    //['extend' => 'create', 'className' => 'btn btn-default btn-sm no-corner',],
                     ['extend' => 'export', 'className' => 'btn btn-default btn-sm no-corner',],
                     ['extend' => 'print', 'className' => 'btn btn-default btn-sm no-corner',],
+                    ['extend' => 'reset', 'className' => 'btn btn-default btn-sm no-corner',],
+                    ['extend' => 'reload', 'className' => 'btn btn-default btn-sm no-corner',],
                 ],
             ]);
     }
@@ -70,6 +73,12 @@ class NewsletterDataTable extends DataTable
     protected function getColumns()
     {
         return [
+            'id' => [
+                'title' => '#ID',
+                'searchable' => false,
+                'width' => '60px',
+                'className' => 'text-center'
+            ],
             'email' => [
                 'data' => 'email',
                 'title' => 'E-mail',

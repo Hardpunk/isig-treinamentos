@@ -40,28 +40,28 @@
 </li>
 
 <li class="{{ Request::is('painel/newsletters*') ? 'active' : '' }}">
-    <a href="{{ route('admin.newsletters.index') }}"><i class="fa fa-edit"></i><span>Newsletters</span></a>
+    <a href="{{ route('admin.newsletters.index') }}"><i class="fas fa-envelope fa-lg"></i><span>Newsletters</span></a>
 </li>
 
 <li class="treeview {{ Request::is('painel/contacts*') ? 'active menu-open' : '' }}">
     <a href="#">
-        <i class="fas fa-users fa-lg"></i>
+        <i class="fas fa-inbox fa-lg"></i>
         <span>Contatos</span>
         <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
         </span>
     </a>
     <ul class="treeview-menu">
-        <li class="{{ Request::is('painel/contacts') ? 'active' : '' }}">
+        <li class="{{ (Request::is('painel/contacts') || Request::is('painel/contacts/*')) ? 'active' : '' }}">
             <a href="{{ route('admin.contacts.index') }}">
-                <i class="fas fa-users"></i>
-                <span>Contato</span>
+                <i class="fas fa-user"></i>
+                <span>Pessoa física</span>
             </a>
         </li>
-        <li class="{{ Request::is('painel/contacts/business') ? 'active' : '' }}">
+        <li class="{{ Request::is('painel/contactsBusiness*') ? 'active' : '' }}">
             <a href="{{ route('admin.contactsBusiness.index') }}">
-                <i class="fas fa-user-graduate"></i>
-                <span>Para Empresas</span>
+                <i class="fas fa-briefcase"></i>
+                <span>Empresas</span>
             </a>
         </li>
     </ul>

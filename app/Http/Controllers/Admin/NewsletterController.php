@@ -3,13 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\DataTables\NewsletterDataTable;
-use App\Http\Requests;
-use App\Http\Requests\CreateNewsletterRequest;
-use App\Http\Requests\UpdateNewsletterRequest;
-use App\Repositories\NewsletterRepository;
-use Flash;
 use App\Http\Controllers\AppBaseController;
+use App\Http\Requests\CreateNewsletterRequest;
+use App\Newsletter;
+use App\Repositories\NewsletterRepository;
 use Auth;
+use Flash;
 use Response;
 
 class NewsletterController extends AppBaseController
@@ -35,17 +34,6 @@ class NewsletterController extends AppBaseController
     }
 
     /**
-     * Show the form for creating a new Newsletter.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        $user = Auth::user();
-        return view('newsletters.create', compact('user'));
-    }
-
-    /**
      * Store a newly created Newsletter in storage.
      *
      * @param  CreateNewsletterRequest  $request
@@ -55,76 +43,17 @@ class NewsletterController extends AppBaseController
     public function store(CreateNewsletterRequest $request)
     {
         $input = $request->all();
+        $email = $input['email'];
 
-        $newsletter = $this->newsletterRepository->create($input);
-
-        Flash::success('Newsletter saved successfully.');
-
-        return redirect(route('admin.newsletters.index'));
-    }
-
-    /**
-     * Display the specified Newsletter.
-     *
-     * @param  int  $id
-     *
-     * @return Response
-     */
-    public function show($id)
-    {
-        $user = Auth::user();
-        $newsletter = $this->newsletterRepository->find($id);
-
-        if (empty($newsletter)) {
-            Flash::error('Newsletter not found');
-
-            return redirect(route('admin.newsletters.index'));
+        if (!Newsletter::where('email', $email)->exists()) {
+            $newsletter = $this->newsletterRepository->create($input);
         }
 
-        return view('newsletters.show', compact('newsletter', 'user'));
-    }
-
-    /**
-     * Show the form for editing the specified Newsletter.
-     *
-     * @param  int  $id
-     *
-     * @return Response
-     */
-    public function edit($id)
-    {
-        $newsletter = $this->newsletterRepository->find($id);
-
-        if (empty($newsletter)) {
-            Flash::error('Newsletter not found');
-
-            return redirect(route('admin.newsletters.index'));
+        if ($request->ajax()) {
+            return response()->json(['status' => true, 'message' => 'E-mail cadastrado com sucesso.']);
         }
 
-        return view('newsletters.edit')->with('newsletter', $newsletter);
-    }
-
-    /**
-     * Update the specified Newsletter in storage.
-     *
-     * @param  int  $id
-     * @param  UpdateNewsletterRequest  $request
-     *
-     * @return Response
-     */
-    public function update($id, UpdateNewsletterRequest $request)
-    {
-        $newsletter = $this->newsletterRepository->find($id);
-
-        if (empty($newsletter)) {
-            Flash::error('Newsletter not found');
-
-            return redirect(route('admin.newsletters.index'));
-        }
-
-        $newsletter = $this->newsletterRepository->update($request->all(), $id);
-
-        Flash::success('Newsletter updated successfully.');
+        Flash::success('E-mail cadastrado com sucesso.');
 
         return redirect(route('admin.newsletters.index'));
     }
@@ -141,14 +70,14 @@ class NewsletterController extends AppBaseController
         $newsletter = $this->newsletterRepository->find($id);
 
         if (empty($newsletter)) {
-            Flash::error('Newsletter not found');
+            Flash::error('E-mail não encontrado');
 
             return redirect(route('admin.newsletters.index'));
         }
 
         $this->newsletterRepository->delete($id);
 
-        Flash::success('Newsletter deleted successfully.');
+        Flash::success('E-mail excluído com sucesso.');
 
         return redirect(route('admin.newsletters.index'));
     }

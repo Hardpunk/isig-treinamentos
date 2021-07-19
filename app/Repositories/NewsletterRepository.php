@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Models\Newsletter;
+use App\Newsletter;
 use App\Repositories\BaseRepository;
 
 /**
@@ -17,7 +17,7 @@ class NewsletterRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        
+
     ];
 
     /**
