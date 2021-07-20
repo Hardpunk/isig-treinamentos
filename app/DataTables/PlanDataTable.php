@@ -127,6 +127,6 @@ class PlanDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'plans_datatable_' . time();
+        return 'planos_' . time();
     }
 }

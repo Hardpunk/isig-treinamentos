@@ -123,6 +123,6 @@ class UserDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'users_datatable_' . time();
+        return 'total_alunos_' . time();
     }
 }

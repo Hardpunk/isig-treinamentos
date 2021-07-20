@@ -20,7 +20,7 @@ class CreateBusinessContactsTable extends Migration
             $table->string('role', 150);
             $table->string('phone', 20);
             $table->string('email', 140);
-            $table->string('message', 255);
+            $table->text('message');
             $table->timestamps();
         });
     }

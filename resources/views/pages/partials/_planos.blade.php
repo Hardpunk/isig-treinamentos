@@ -9,7 +9,7 @@
             <div class="mycard basic {{ $loop->iteration == 2 ? 'mid' : '' }}">
                 <div class="title">
                     <h1>{{ $plano->title }}</h1>
-                    <h5><span class="badge badge-theme-color">{{ $plano->months }} meses</span></h5>
+                    <h5><span class="badge badge-theme-color">{{ plan_time_name($plano->months) }}</span></h5>
                 </div>
                 <div class="title preco">
                     <p>{{ $plano->months }}x de <b> R${{ number_format($plano->installment_amount, 2, ',', '.') }}</b></p>

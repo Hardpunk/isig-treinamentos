@@ -87,7 +87,7 @@ class NewsletterDataTable extends DataTable
             ],
             'created_at' => [
                 'data' => 'created_at',
-                'title' => 'Data registro',
+                'title' => 'Data cadastro',
                 'width' => '150px',
                 'searchable' => false,
                 'orderable' => true,
@@ -103,6 +103,6 @@ class NewsletterDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'newsletters_datatable_' . time();
+        return 'newsletters_' . time();
     }
 }

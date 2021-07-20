@@ -176,4 +176,54 @@ $(function () {
                 });
         }
     });
+
+    $("#contactBusinessButton").on("click", function () {
+        var $this = $(this),
+            $form = $this.closest("form"),
+            isValid = $form[0].reportValidity(),
+            formData = $form.serialize();
+
+        if (isValid) {
+            $.ajax({
+                url: "/ajax/business",
+                type: "POST",
+                data: formData,
+                beforeSend: function () {
+                    $this.button("loading");
+                },
+            })
+                .done(function (data) {
+                    if (data.status === true) {
+                        $this.closest(".form-wrapper")
+                            .html(`
+                                <div class="alert alert-success mb-0" role="alert">
+                                    ${data.message}
+                                </div>`);
+                    } else {
+                        $this.button("reset");
+                        grecaptcha.reset();
+                        $("#businessContactMessage")
+                            .html(`
+                                <div class="alert alert-danger alert-dismissible fade show mb-0 mt-2" role="alert">
+                                    Erro ao enviar contato.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>`);
+                    }
+                })
+                .fail(function (error) {
+                    $this.button("reset");
+                    grecaptcha.reset();
+                    $("#businessContactMessage")
+                        .html(`
+                            <div class="alert alert-danger alert-dismissible fade show mb-0 mt-2" role="alert">
+                                ${error.responseJSON.message}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>`);
+                });
+        }
+    });
 });

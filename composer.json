@@ -9,11 +9,15 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "ext-json": "*",
+        "barryvdh/laravel-snappy": "^0.4.8",
         "biscolab/laravel-recaptcha": "^5.0",
         "doctrine/dbal": "^2.11",
         "fideloper/proxy": "^4.0",
         "geekcom/validator-docs": "^3.5",
         "guzzlehttp/guzzle": "^7.1",
+        "h4cc/wkhtmltoimage-amd64": "0.12.x",
+        "h4cc/wkhtmltopdf-amd64": "0.12.x",
         "haruncpi/laravel-id-generator": "^1.0",
         "infyomlabs/adminlte-templates": "^2.0",
         "infyomlabs/laravel-generator": "7.0.x-dev",
@@ -24,8 +28,7 @@
         "pagarme/pagarme-php": "^4.1",
         "yajra/laravel-datatables-buttons": "^4.10",
         "yajra/laravel-datatables-html": "^4.32",
-        "yajra/laravel-datatables-oracle": "~9.0",
-        "ext-json": "*"
+        "yajra/laravel-datatables-oracle": "~9.0"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.8",

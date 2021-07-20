@@ -119,6 +119,6 @@ class UnregisteredUserDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'users_datatable_' . time();
+        return 'alunos_nao_matriculados_' . time();
     }
 }

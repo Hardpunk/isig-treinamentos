@@ -115,6 +115,6 @@ class ContactDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'contacts_datatable_' . time();
+        return 'contatos_' . time();
     }
 }

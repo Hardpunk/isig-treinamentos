@@ -157,6 +157,6 @@ class PaymentDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'payments_datatable_' . time();
+        return 'relatorio_vendas_' . time();
     }
 }

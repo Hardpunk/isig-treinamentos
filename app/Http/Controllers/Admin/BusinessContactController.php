@@ -41,7 +41,7 @@ class BusinessContactController extends AppBaseController
      */
     public function store(CreateBusinessContactRequest $request)
     {
-        $input = $request->all();
+        $input = $request->except('g-recaptcha-response');
 
         $businessContact = $this->businessContactRepository->create($input);
 

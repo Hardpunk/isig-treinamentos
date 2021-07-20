@@ -121,6 +121,6 @@ class BusinessContactDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'business_contacts_datatable_' . time();
+        return 'contatos_empresas_' . time();
     }
 }

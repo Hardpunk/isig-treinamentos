@@ -1,4 +1,9 @@
 @extends('layouts.master')
+
+@section('js_tags')
+    {!! htmlScriptTagJsApi() !!}
+@endsection
+
 @section('content')
 <style>
 #paraempresas p {
@@ -121,15 +126,22 @@
                     <img class="svg-img" src="/images/sua-empresa/sua-empresa-3.png">
                     <div class="w-100 py-3"></div>
                 </div>
-                <div class="col-md-4">
-                    <form action="#" class="form-contact" method="post" tabindex="1">
-                        <input type="text" class="form-contact-input" name="nome" placeholder="Nome" required />
-                        <input type="text" class="form-contact-input" name="cargo" placeholder="Cargo" required />
-                        <input type="tel" class="form-contact-input" name="tel" placeholder="Telefone" />
-                        <input type="email" class="form-contact-input" name="email" placeholder="Email" required />
-                        <textarea class="form-contact-textarea" name="conteudo" placeholder="Mensagem" required></textarea>
-                        <button type="submit" class="form-contact-button">Enviar</button>
+                <div class="col-md-4 form-wrapper">
+                    <form id="contactBusinessForm" class="form-contact" method="post">
+                        @csrf
+                        <input type="text" class="form-contact-input" name="name" placeholder="Nome" required />
+                        <input type="text" class="form-contact-input" name="role" placeholder="Cargo" required />
+                        <input type="text" class="form-contact-input phone-mask" name="phone" placeholder="Telefone" required />
+                        <input type="email" class="form-contact-input" name="email" placeholder="E-mail" required />
+                        <textarea class="form-contact-textarea" name="message" placeholder="Mensagem" required></textarea>
+                        <div class="mb-4">
+                            {!! htmlFormSnippet() !!}
+                        </div>
+                        <button id="contactBusinessButton" type="button"
+                                data-loading-text="<i class='fas fa-spinner fa-spin mr-2'></i>Enviando..."
+                                class="form-contact-button">Enviar</button>
                     </form>
+                    <div id="businessContactMessage"></div>
                 </div>
             </div>
         </div>

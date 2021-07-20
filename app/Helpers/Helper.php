@@ -274,6 +274,43 @@ if (!function_exists('get_payment_status')) {
     }
 }
 
+if (!function_exists('get_payment_status_label')) {
+    /**
+     * Get status message
+     *
+     * @param string $status
+     * @return string
+     */
+    function get_payment_status_label($status)
+    {
+        switch ($status) {
+            case 'Aguardando pagamento':
+            case 'Em análise':
+            case 'Em revisão':
+            case 'Em processo':
+                $class = 'info';
+                break;
+            case 'Aprovado':
+            case 'Autorizada':
+                $class = 'success';
+                break;
+            case 'Estorno boleto':
+            case 'Estornada':
+                $class = 'warning';
+                break;
+            case 'Chargeback':
+            case 'Recusado':
+                $class = 'danger';
+                break;
+            default:
+                $status = '';
+                $class = '';
+        }
+
+        return "<span class='label label-{$class}'>{$status}</span>";
+    }
+}
+
 if (!function_exists('get_payment_type')) {
     /**
      * Get payment type
@@ -325,11 +362,38 @@ if (!function_exists('round_up')) {
         return number_format($rounded, 2, ',', '.');
     }
 }
+
 if (!function_exists('round_down')) {
     function round_down($number, $precision = 2)
     {
         $fig = (int) str_pad('1', $precision, '0');
         $rounded = (floor($number * $fig) / $fig);
         return number_format($rounded, 2, ',', '.');
+    }
+}
+
+if (!function_exists('plan_time_name')) {
+    function plan_time_name($months)
+    {
+        switch($months) {
+            case 1:
+                $name = "Mensal";
+                break;
+            case 2:
+                $name = "Bimestral";
+                break;
+            case 3:
+                $name = "Trimestral";
+                break;
+            case 6:
+                $name = "Semestral";
+                break;
+            case 12:
+                $name = "Anual";
+                break;
+            default:
+                $name = "";
+        }
+        return $name;
     }
 }

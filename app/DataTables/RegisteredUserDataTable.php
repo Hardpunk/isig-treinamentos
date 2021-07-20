@@ -119,6 +119,6 @@ class RegisteredUserDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'users_datatable_' . time();
+        return 'alunos_matriculados_' . time();
     }
 }

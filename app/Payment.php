@@ -108,4 +108,21 @@ class Payment extends Model
     {
         return $this->hasOne(User::class, 'id', 'user_id');
     }
+
+    /**
+     * Return Coupon
+     *
+     * @return HasOne
+     */
+    public function Coupon()
+    {
+        return $this->hasOne(Coupon::class, 'id', 'coupon_id');
+    }
+
+    public function items()
+    {
+        $plans = $this->plans->toArray();
+        $courses = $this->courses->toArray();
+        return array_merge($plans, $courses);
+    }
 }

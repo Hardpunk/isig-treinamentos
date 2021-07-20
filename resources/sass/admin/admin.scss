@@ -26,6 +26,35 @@ table.table-bordered {
     }
 }
 
+section.invoice {
+    .label {
+        padding: .75rem 1.25rem !important;
+
+        &.label-bank-slip {
+            background-color: #7ad588;
+            color: #003f00;
+            text-shadow: 1px 1px 1px #97f8a5;
+        }
+
+       &.label-credit-card {
+            background-color: #FCB70A;
+            text-shadow: 1px 1px 1px #fff4da;
+            color: #50350c;
+        }
+    }
+
+    table.table-venda-info {
+        border-collapse: separate;
+    }
+
+    table.table > thead > tr > th,
+    table.table > tbody > tr > td {
+        vertical-align: middle;
+    }
+}
+
+
+
 .sidebar-menu {
     >li {
         >a {
@@ -62,5 +91,11 @@ table.table-bordered {
                 }
             }
         }
+    }
+}
+
+@media (max-width: 800px) {
+    section.invoice .page-header small.pull-right {
+        float: none !important;
     }
 }

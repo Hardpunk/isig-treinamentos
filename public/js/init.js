@@ -395,6 +395,51 @@ $(function () {
     });
 
     var scroll = new SmoothScroll('a[href*="#"]');
+
+    $(".botaoFooter").on("click", function () {
+        var $this = $(this),
+            $form = $this.closest("form"),
+            isValid = $form[0].reportValidity(),
+            formData = $form.serialize();
+
+        if (isValid) {
+            $.ajax({
+                url: "/ajax/newsletter",
+                type: "POST",
+                data: formData,
+                beforeSend: function () {
+                    $this.button("loading");
+                },
+            })
+                .done(function (data) {
+                    if (data.status === true) {
+                        $this.closest(".subscribe-form").html(`
+                        <div class="alert alert-success mb-0" role="alert">
+                            ${data.message}
+                        </div>`);
+                    } else {
+                        $this.button("reset");
+                        $("#newsletterMessage").html(`
+                        <div class="alert alert-danger alert-dismissible fade show mb-0 mt-2" role="alert">
+                            Erro ao cadastrar e-mail.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>`);
+                    }
+                })
+                .fail(function (error) {
+                    $this.button("reset");
+                    $("#newsletterMessage").html(`
+                    <div class="alert alert-danger alert-dismissible fade show mb-0 mt-2" role="alert">
+                        Erro ao cadastrar e-mail.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>`);
+                });
+        }
+    });
 });
 
 $(document).on(

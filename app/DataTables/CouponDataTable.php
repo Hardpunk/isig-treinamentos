@@ -119,6 +119,6 @@ class CouponDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'coupons_datatable_' . time();
+        return 'cupons_' . time();
     }
 }
