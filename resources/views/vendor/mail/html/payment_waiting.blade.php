@@ -101,7 +101,7 @@
                                                     </p>
                                                     <p
                                                         style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; text-align: left;">
-                                                        <span>Whatsapp - (44) 99944-2200</span>
+                                                        <span>Whatsapp - (61) 99884-2889</span>
                                                     </p>
                                                 </td>
                                             </tr>
